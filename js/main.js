@@ -65,4 +65,38 @@ function getView(){
 $(function(){
 	setLanguage(getLanguageFromStorage());
 	getView();
+
+	$('#language-chooser a').click( function() {
+		window.console.log('clicked');
+		var lang = $(this).attr('rel')
+		$.ajax({
+			type: 'GET',
+			contentType: 'application/json',
+			dataType: 'json',
+			url: 'data/texts-'+ lang +'.json',
+			success: function(jsonData) {
+				window.console.log('jsonsucces');
+				$.ajax({
+					url: 'templates/home.html',
+					type: "GET",
+					dataType: "html",
+					success: function(data) {
+						window.console.log('htmlsucces');
+						theHTML = Mustache.to_html(data, jsonData);
+						$("#content").html(theHTML);
+					},
+					error: function(){
+						alert('error in render()');
+						window.console.log('htmlerror');
+					}
+				});
+			},
+			error: function() {
+				window.console.log('jsonerror');
+			}
+		});
+	});
+
+
+
 });
