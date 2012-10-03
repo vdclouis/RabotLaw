@@ -11,8 +11,7 @@ function setLanguage(language){
 	setLanguageToStorage(language);
 	
 	$("#language-indicator").html('<h1>' + language + '</h1>');
-	
-	
+
 	$('a[rel="' + selectedLanguage + '"]').parent().removeClass("selected");
 	$('a[rel="' + language + '"]').parent().addClass("selected");
 	
