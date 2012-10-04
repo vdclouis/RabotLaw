@@ -1,50 +1,66 @@
-//get and set localStorage
-
-var selectedLanguage = "nl";
-
-function setLanguageFromLink(languageLink){
-	var language = $(languageLink).attr('rel');
-	setLanguage(language);
-}
-
-function setLanguage(language){
-	setLanguageToStorage(language);
-	
-	$("#language-indicator").html('<h1>' + language + '</h1>');
-
-	$('a[rel="' + selectedLanguage + '"]').parent().removeClass("selected");
-	$('a[rel="' + language + '"]').parent().addClass("selected");
-	
-	selectedLanguage = language;
-}
-
-function getLanguageFromStorage(){
-	var language = "nl";
-
-	if (Modernizr.localstorage) {
-		if(localStorage.getItem('rabotlaw-language') === null){
-			setLanguageToStorage('nl');
-		} else {
-			language = localStorage.getItem('rabotlaw-language');
-		}
-	}
-	return language;
-}
-
-function setLanguageToStorage(language){
-	if (Modernizr.localstorage) {
-		localStorage.setItem('rabotlaw-language',language);
-	} else {
-		setLanguage('nl');
-	}
+// set default value when localStorage is empty
+if(localStorage.getItem('rabotlaw-language') === null){
+	localStorage.setItem('rabotlaw-page', 'home');
+	localStorage.setItem('rabotlaw-language', 'nl');
 }
 
 $(function(){
-	setLanguage(getLanguageFromStorage());
+	
+	
+	//set data in localstorage
+	//page
+	var page = "home";
+	$('nav a').click(function() {
+		var page = $(this).attr('rel');
+		localStorage.setItem('rabotlaw-page', page);
+	});
 
-	$('#language-chooser a').click( function() {
-		window.console.log('clicked');
+	//lang
+	var lang = "nl";
+	$('#language-chooser a').click(function() {
 		var lang = $(this).attr('rel');
+		localStorage.setItem('rabotlaw-language', lang);
+	});
+
+	//get data from ls
+	currentPage = localStorage.getItem('rabotlaw-page');
+	currentLang = localStorage.getItem('rabotlaw-language');
+
+
+	//load localStorage lang & page on first pageload
+	$.ajax({
+		type: 'GET',
+		contentType: 'application/json',
+		dataType: 'json',
+		url: 'data/texts-'+ currentLang +'.json',
+		success: function(jsonData) {
+			window.console.log('jsonsucces');
+			$.ajax({
+				url: 'templates/'+ currentPage +'.html',
+				type: "GET",
+				dataType: "html",
+				success: function(template) {
+					window.console.log('htmlsucces');
+					theHTML = Mustache.to_html(template, jsonData);
+					$("#content").html(theHTML);
+				},
+				error: function(){
+					//alert('error in render()');
+					console.log('htmlerror');
+				}
+			});
+		},
+		error: function() {
+			console.log('jsonerror');
+		}
+	});
+
+
+	//change language -> JSON files on click
+	$('#language-chooser a').click( function() {
+		var lang = $(this).attr('rel');
+		currentLang = lang;
+
 		$.ajax({
 			type: 'GET',
 			contentType: 'application/json',
@@ -53,12 +69,12 @@ $(function(){
 			success: function(jsonData) {
 				window.console.log('jsonsucces');
 				$.ajax({
-					url: 'templates/home.html',
+					url: 'templates/'+ currentPage +'.html',
 					type: "GET",
 					dataType: "html",
-					success: function(data) {
+					success: function(template) {
 						window.console.log('htmlsucces');
-						theHTML = Mustache.to_html(data, jsonData);
+						theHTML = Mustache.to_html(template, jsonData);
 						$("#content").html(theHTML);
 					},
 					error: function(){
@@ -70,9 +86,39 @@ $(function(){
 			error: function() {
 				window.console.log('jsonerror');
 			}
-		});
-	});
+		}); //eo ajax
+	}); //eo click
 
+	//change page -> template on click
+	$('nav a').click(function(){
+		var page = $(this).attr('rel');
+		currentPage = page;
 
-
-});
+		$.ajax({
+			type: 'GET',
+			contentType: 'application/json',
+			dataType: 'json',
+			url: 'data/texts-'+ currentLang +'.json',
+			success: function(jsonData) {
+				window.console.log('jsonsucces');
+				$.ajax({
+					url: 'templates/'+ page +'.html',
+					type: "GET",
+					dataType: "html",
+					success: function(template) {
+						window.console.log('htmlsucces');
+						theHTML = Mustache.to_html(template, jsonData);
+						$("#content").html(theHTML);
+					},
+					error: function(){
+						alert('error in render()');
+						window.console.log('htmlerror');
+					}
+				});
+			},
+			error: function() {
+				window.console.log('jsonerror');
+			}
+		}); //eo ajax
+	}); //eo click
+}); //eo doc ready
