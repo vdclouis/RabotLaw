@@ -39,36 +39,12 @@ function setLanguageToStorage(language){
 	}
 }
 
-//MOOOOOOustache
-
-function render(json, html){
-	$.ajax({
-		url: 'templates/' + html + '.html',
-		type: "GET",
-		dataType: "html",
-		success: function(data) {
-			theHTML = Mustache.to_html(data, json);
-			$("#content").html(theHTML);
-		},
-		error: function(){
-			alert('error in render()');
-		}
-	});
-}
-//select template
-function getView(){
-	$.getJSON('data/texts-' + selectedLanguage + '.json', function(data){
-		render(data, 'home');
-	});
-}
-
 $(function(){
 	setLanguage(getLanguageFromStorage());
-	getView();
 
 	$('#language-chooser a').click( function() {
 		window.console.log('clicked');
-		var lang = $(this).attr('rel')
+		var lang = $(this).attr('rel');
 		$.ajax({
 			type: 'GET',
 			contentType: 'application/json',
