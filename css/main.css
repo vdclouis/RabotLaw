@@ -93,10 +93,13 @@ header #language-chooser {
   header #language-chooser ul {
     list-style: none;
     border: 1px solid red;
-    padding: 0; }
+    padding: 0;
+    margin: 0;
+    overflow: hidden; }
     header #language-chooser ul li {
       float: left;
-      margin-right: 10px; }
+      margin-right: 10px;
+      cursor: pointer; }
 header nav {
   border: 1px solid red;
   display: inline-block; }
@@ -106,10 +109,12 @@ header nav {
       float: left; }
 
 .law .rightscontainer {
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow: hidden; }
   .law .rightscontainer .rightbox {
     width: 80%;
-    border: 1px solid black; }
+    border: 1px solid black;
+    float: left; }
     .law .rightscontainer .rightbox img {
       height: 100px;
       width: 90%;
@@ -125,7 +130,9 @@ footer a {
   .rightscontainer .rightbox {
     float: left; } }
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) {
   header h1 {
     text-align: left; } }
 /* ==========================================================================
