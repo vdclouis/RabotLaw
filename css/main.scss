@@ -124,13 +124,16 @@ header{
 		float: right;
 
 		ul{
-			list-style:none;
+			list-style: none;
 			border: 1px solid red;
-			padding:0;
+			padding: 0;
+			margin: 0;
+			overflow: hidden;
 
 			li{
 				float:left;
 				margin-right:10px;
+				cursor: pointer;
 			}
 		}
 	}
@@ -150,6 +153,7 @@ header{
 }
 
 .law{
+
 	h1{
 
 	}
@@ -157,12 +161,13 @@ header{
 
 	}
 	.rightscontainer{
+		margin: 0 auto;
+		overflow: hidden;
 
 		.rightbox{
 			width: 80%;
-			//height: 100px;
-			float: left;
 			border: 1px solid black;
+			float: left;
 
 			img{
 				height: 100px;

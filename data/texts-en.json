@@ -2,5 +2,9 @@
 	"title": "A English Test",
 	"body": "This is a test.",
 	"fullname": "Johny Mc Gee",
-	"contactheader": "Please Contact Us"
+	"contactheader": "Please Contact Us",
+	"maritimetitle": "Maritime rights",
+	"internationaltitle": "International public law",
+	"familytitle": "Family law",
+	"arbitragetitle": "Arbitration & mediation"
 }

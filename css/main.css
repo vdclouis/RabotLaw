@@ -95,10 +95,13 @@ header {
     header #language-chooser ul {
       list-style: none;
       border: 1px solid red;
-      padding: 0; }
+      padding: 0;
+      margin: 0;
+      overflow: hidden; }
       header #language-chooser ul li {
         float: left;
-        margin-right: 10px; }
+        margin-right: 10px;
+        cursor: pointer; }
   header nav {
     border: 1px solid red;
     display: inline-block; }
@@ -107,16 +110,19 @@ header {
       header nav ul li {
         float: left; }
 
-.law .rightscontainer .rightbox {
-  width: 80%;
-  float: left;
-  border: 1px solid black; }
-  .law .rightscontainer .rightbox img {
-    height: 100px;
-    width: 90%;
-    margin: 0 auto;
-    border: 1px dashed pink;
-    display: block; }
+.law .rightscontainer {
+  margin: 0 auto;
+  overflow: hidden; }
+  .law .rightscontainer .rightbox {
+    width: 80%;
+    border: 1px solid black;
+    float: left; }
+    .law .rightscontainer .rightbox img {
+      height: 100px;
+      width: 90%;
+      margin: 0 auto;
+      border: 1px dashed pink;
+      display: block; }
 
 footer {
   color: #323232; }

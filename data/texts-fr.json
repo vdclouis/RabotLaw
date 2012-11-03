@@ -2,5 +2,9 @@
 	"title": "Le French Test",
 	"body": "ceci est un test",
 	"fullname": "Jean-Claude",
-	"contactheader": "SVP contactez-nous"
+	"contactheader": "SVP contactez-nous",
+	"maritimetitle": "le mediteranée",
+	"internationaltitle": "le international",
+	"familytitle": "le famille",
+	"arbitragetitle": "les franmaçon"
 }
