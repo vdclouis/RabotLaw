@@ -1,0 +1,3 @@
+font header color: #323232
+font body: #999999
+background color: #ececec
