@@ -106,7 +106,7 @@ body{
 }
 
 #container{
-	width:90%;
+	width: 100%;
 	margin: 0 auto;
 	//border: 1px solid $badass;
 }
@@ -119,34 +119,58 @@ header{
 		border-bottom: 1px solid $p;
 		text-align:center;
 	}
+	.menublock{
+		display: none;
+		//height: 0;
+		padding-bottom: 20px;
+		background-image: url('../img/dark_wall.png');
+		box-shadow: inset 0px 0px 2px 2px black;
+		#language-chooser{
+			float: right;
 
-	#language-chooser{
-		float: right;
+			ul{
+				list-style: none;
+				border: 1px solid red;
+				padding: 0;
+				margin: 0;
+				overflow: hidden;
 
-		ul{
-			list-style: none;
-			border: 1px solid red;
-			padding: 0;
-			margin: 0;
-			overflow: hidden;
-
-			li{
-				float:left;
-				margin-right:10px;
-				cursor: pointer;
+				li{
+					float:left;
+					margin-right:10px;
+					cursor: pointer;
+				}
+			}
+		}
+		nav{
+			height: 35px;
+			padding-top: 15px;
+			ul{
+				margin: 0;
+				overflow: hidden;
+				li{
+					float: left;
+					margin-right: 15px;
+					a{
+						text-decoration: none;
+						color: white;
+						text-shadow: 1px 1px 1px black;
+					}
+				}
 			}
 		}
 	}
 
-	nav{
-		display:none;
-	}
-
 	#navicon{
 		float:right;
-		margin: -55px -74px 0 0;
+		//margin: -55px -74px 0 0;
 		width:20px;
 	}
+}
+
+#content{
+	//margin-top:	30px;
+	padding-top: 20px;
 }
 
 .law{

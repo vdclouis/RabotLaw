@@ -1,1 +1,1 @@
-$(function(){$("#navicon").click(function(){$("nav").toggle()})});
+$(function(){$("#navicon").toggle(function(){$(".menublock").show("blind",{direction:"vertical"},500)},function(){$(".menublock").hide("blind",{direction:"vertical"},500)})});

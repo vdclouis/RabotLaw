@@ -80,7 +80,7 @@ body {
   background-color: #ececec; }
 
 #container {
-  width: 90%;
+  width: 100%;
   margin: 0 auto; }
 
 header {
@@ -89,24 +89,42 @@ header {
     font-family: 'Bitter', serif;
     border-bottom: 1px solid #999999;
     text-align: center; }
-  header #language-chooser {
-    float: right; }
-    header #language-chooser ul {
-      list-style: none;
-      border: 1px solid red;
-      padding: 0;
-      margin: 0;
-      overflow: hidden; }
-      header #language-chooser ul li {
-        float: left;
-        margin-right: 10px;
-        cursor: pointer; }
-  header nav {
-    display: none; }
+  header .menublock {
+    display: none;
+    padding-bottom: 20px;
+    background-image: url("../img/dark_wall.png");
+    box-shadow: inset 0px 0px 2px 2px black; }
+    header .menublock #language-chooser {
+      float: right; }
+      header .menublock #language-chooser ul {
+        list-style: none;
+        border: 1px solid red;
+        padding: 0;
+        margin: 0;
+        overflow: hidden; }
+        header .menublock #language-chooser ul li {
+          float: left;
+          margin-right: 10px;
+          cursor: pointer; }
+    header .menublock nav {
+      height: 35px;
+      padding-top: 15px; }
+      header .menublock nav ul {
+        margin: 0;
+        overflow: hidden; }
+        header .menublock nav ul li {
+          float: left;
+          margin-right: 15px; }
+          header .menublock nav ul li a {
+            text-decoration: none;
+            color: white;
+            text-shadow: 1px 1px 1px black; }
   header #navicon {
     float: right;
-    margin: -55px -74px 0 0;
     width: 20px; }
+
+#content {
+  padding-top: 20px; }
 
 .law .rightscontainer {
   margin: 0 auto;
