@@ -109,7 +109,50 @@ body{
 
 
 .law{
+	h1{
 
+	}
+	p{
+
+	}
+	.rightscontainer{
+
+		.rightbox{
+			width: 80%;
+			//height: 100px;
+			float: left;
+			border: 1px solid black;
+
+			img{
+				height: 100px;
+				width: 90%;
+				margin: 0 auto;
+				border: 1px dashed pink;
+				display: block;
+			}
+
+			p{
+
+			}
+		}
+
+		.maritime{
+
+		}
+
+		.international{
+
+		}
+
+		.family{
+
+		}
+
+		.arbitrage{
+
+		}
+
+	}
 }
 
 
@@ -125,7 +168,36 @@ body{
 
 
 .content{
-	
+
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1200px) {
+
+	.rightscontainer{
+
+		.rightbox{
+			float: left;
+		}
+
+		.maritime{
+
+		}
+
+		.international{
+
+		}
+
+		.family{
+
+		}
+
+		.arbitrage{
+			
+		}
+
+	}
+
+
 }
 
 

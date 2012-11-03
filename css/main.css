@@ -84,6 +84,20 @@ body {
 #language-chooser {
   float: right; }
 
+.law .rightscontainer .rightbox {
+  width: 80%;
+  float: left;
+  border: 1px solid black; }
+  .law .rightscontainer .rightbox img {
+    height: 100px;
+    width: 90%;
+    margin: 0 auto;
+    border: 1px dashed pink;
+    display: block; }
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1200px) {
+  .rightscontainer .rightbox {
+    float: left; } }
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    Theses examples override the primary ('mobile first') styles.
