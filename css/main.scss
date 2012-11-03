@@ -93,27 +93,159 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+@import url(http://fonts.googleapis.com/css?family=Bitter);
 
-
-.selected{
-	color: red;
-}
+$badass: #BADA55;
 
 body{
 	background: url(../img/bg.png);
 }
 
-#language-chooser{
-	float: right;
+#container{
+	width:90%;
+	margin: 0 auto;
+	border: 1px solid $badass;
+}
+
+header{
+	h1{
+		font-family: 'Bitter', serif;
+		border: 1px solid red;
+		text-align:center;
+	}
+
+	#language-chooser{
+		float: right;
+
+		ul{
+			list-style:none;
+			border: 1px solid red;
+			padding:0;
+
+			li{
+				float:left;
+				margin-right:10px;
+			}
+		}
+	}
+
+	nav{
+		border: 1px solid red;
+		display: inline-block;
+
+		ul{
+			padding:0;
+
+			li{
+				float: left;
+			}
+		}
+	}
+}
+
+.law{
+	h1{
+
+	}
+	p{
+
+	}
+	.rightscontainer{
+
+		.rightbox{
+			width: 80%;
+			//height: 100px;
+			float: left;
+			border: 1px solid black;
+
+			img{
+				height: 100px;
+				width: 90%;
+				margin: 0 auto;
+				border: 1px dashed pink;
+				display: block;
+			}
+
+			p{
+
+			}
+		}
+
+		.maritime{
+
+		}
+
+		.international{
+
+		}
+
+		.family{
+
+		}
+
+		.arbitrage{
+
+		}
+
+	}
 }
 
 
+.rights{
 
+}
 
+.team{
 
+}
 
+.content{
 
+}
 
+footer{
+	a{
+		text-decoration:none;
+		color:#000;
+	}
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1200px) {
+
+	.rightscontainer{
+
+		.rightbox{
+			float: left;
+		}
+
+		.maritime{
+
+		}
+
+		.international{
+
+		}
+
+		.family{
+
+		}
+
+		.arbitrage{
+			
+		}
+	}
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) {
+	header{
+		h1{
+			text-align: left;
+		}
+	}
+}
 
 
 
