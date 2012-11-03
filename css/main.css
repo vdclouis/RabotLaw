@@ -87,7 +87,7 @@ body {
 header h1 {
   font-family: 'Bitter', serif;
   border: 1px solid red;
-  display: inline-block; }
+  text-align: center; }
 header #language-chooser {
   float: right; }
   header #language-chooser ul {
@@ -116,13 +116,17 @@ header nav {
     border: 1px dashed pink;
     display: block; }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1200px) {
-  .rightscontainer .rightbox {
-    float: left; } }
 footer a {
   text-decoration: none;
   color: #000; }
 
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1200px) {
+  .rightscontainer .rightbox {
+    float: left; } }
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  header h1 {
+    text-align: left; } }
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    Theses examples override the primary ('mobile first') styles.
