@@ -1,1 +1,1 @@
-$(function(){$("#navicon").click(function(){$("nav").toggle()});$(window).resize(function(){$("nav").hide()})});
+$(function(){$("#navicon").click(function(){$("nav").toggle()})});
