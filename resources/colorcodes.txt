@@ -1,3 +1,4 @@
 font header color: #323232
-font body: #999999
+font p: #999999
 background color: #ececec
+footer color: #323232
