@@ -77,33 +77,35 @@ textarea {
    Author's custom styles
    ========================================================================== */
 body {
-  background: url(../img/bg.png); }
+  background-color: #ececec; }
 
 #container {
   width: 90%;
   margin: 0 auto;
   border: 1px solid #bada55; }
 
-header h1 {
-  font-family: 'Bitter', serif;
-  border: 1px solid red;
-  text-align: center; }
-header #language-chooser {
-  float: right; }
-  header #language-chooser ul {
-    list-style: none;
+header {
+  color: #323232; }
+  header h1 {
+    font-family: 'Bitter', serif;
     border: 1px solid red;
-    padding: 0; }
-    header #language-chooser ul li {
-      float: left;
-      margin-right: 10px; }
-header nav {
-  border: 1px solid red;
-  display: inline-block; }
-  header nav ul {
-    padding: 0; }
-    header nav ul li {
-      float: left; }
+    text-align: center; }
+  header #language-chooser {
+    float: right; }
+    header #language-chooser ul {
+      list-style: none;
+      border: 1px solid red;
+      padding: 0; }
+      header #language-chooser ul li {
+        float: left;
+        margin-right: 10px; }
+  header nav {
+    border: 1px solid red;
+    display: inline-block; }
+    header nav ul {
+      padding: 0; }
+      header nav ul li {
+        float: left; }
 
 .law .rightscontainer .rightbox {
   width: 80%;
@@ -116,9 +118,11 @@ header nav {
     border: 1px dashed pink;
     display: block; }
 
-footer a {
-  text-decoration: none;
-  color: #000; }
+footer {
+  color: #323232; }
+  footer a {
+    text-decoration: none;
+    color: #323232; }
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1200px) {
   .rightscontainer .rightbox {

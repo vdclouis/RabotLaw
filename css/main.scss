@@ -96,9 +96,13 @@ textarea {
 @import url(http://fonts.googleapis.com/css?family=Bitter);
 
 $badass: #BADA55;
+$header: #323232;
+$p: #999999;
+$bg: #ececec;
+$footer: #323232;
 
 body{
-	background: url(../img/bg.png);
+	background-color:$bg;
 }
 
 #container{
@@ -108,6 +112,8 @@ body{
 }
 
 header{
+	color: $header;
+
 	h1{
 		font-family: 'Bitter', serif;
 		border: 1px solid red;
@@ -204,9 +210,11 @@ header{
 }
 
 footer{
+	color: $footer;
+
 	a{
 		text-decoration:none;
-		color:#000;
+		color:$footer;
 	}
 }
 
@@ -240,11 +248,13 @@ footer{
 @media only screen 
 and (min-width : 768px) 
 and (max-width : 1024px) {
+
 	header{
 		h1{
 			text-align: left;
 		}
 	}
+	
 }
 
 
