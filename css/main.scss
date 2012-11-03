@@ -93,20 +93,56 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+@import url(http://fonts.googleapis.com/css?family=Bitter);
 
-
-.selected{
-	color: red;
-}
+$badass: #BADA55;
 
 body{
 	background: url(../img/bg.png);
 }
 
-#language-chooser{
-	float: right;
+#container{
+	width:90%;
+	margin: 0 auto;
+	border: 1px solid $badass;
 }
 
+header{
+	h1{
+		font-family: 'Bitter', serif;
+		border: 1px solid red;
+		display:inline-block;
+	}
+
+
+	
+
+	#language-chooser{
+		float: right;
+		ul{
+			list-style:none;
+			border: 1px solid red;
+			padding:0;
+
+			li{
+				float:left;
+				margin-right:10px;
+			}
+		}
+	}
+
+	nav{
+		border: 1px solid red;
+		display: inline-block;
+		ul{
+			padding:0;
+
+			li{
+				float: left;
+			}
+		}
+	}
+}
 
 .law{
 	h1{
@@ -160,12 +196,9 @@ body{
 
 }
 
-
 .team{
 
 }
-
-
 
 .content{
 
@@ -198,6 +231,13 @@ body{
 	}
 
 
+}
+
+footer{
+	a{
+		text-decoration:none;
+		color:#000;
+	}
 }
 
 

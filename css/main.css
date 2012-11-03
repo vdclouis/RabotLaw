@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Bitter);
 /*
  * HTML5 Boilerplate
  *
@@ -75,14 +76,34 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-.selected {
-  color: red; }
-
 body {
   background: url(../img/bg.png); }
 
-#language-chooser {
+#container {
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #bada55; }
+
+header h1 {
+  font-family: 'Bitter', serif;
+  border: 1px solid red;
+  display: inline-block; }
+header #language-chooser {
   float: right; }
+  header #language-chooser ul {
+    list-style: none;
+    border: 1px solid red;
+    padding: 0; }
+    header #language-chooser ul li {
+      float: left;
+      margin-right: 10px; }
+header nav {
+  border: 1px solid red;
+  display: inline-block; }
+  header nav ul {
+    padding: 0; }
+    header nav ul li {
+      float: left; }
 
 .law .rightscontainer .rightbox {
   width: 80%;
@@ -98,6 +119,10 @@ body {
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1200px) {
   .rightscontainer .rightbox {
     float: left; } }
+footer a {
+  text-decoration: none;
+  color: #000; }
+
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    Theses examples override the primary ('mobile first') styles.
