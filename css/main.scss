@@ -108,7 +108,7 @@ body{
 #container{
 	width:90%;
 	margin: 0 auto;
-	border: 1px solid $badass;
+	//border: 1px solid $badass;
 }
 
 header{
@@ -116,7 +116,7 @@ header{
 
 	h1{
 		font-family: 'Bitter', serif;
-		border: 1px solid red;
+		border-bottom: 1px solid $p;
 		text-align:center;
 	}
 
@@ -144,7 +144,8 @@ header{
 
 	#navicon{
 		float:right;
-		margin: -55px -65px 0 0;
+		margin: -55px -74px 0 0;
+		width:20px;
 	}
 }
 
@@ -251,9 +252,30 @@ and (max-width : 1024px) {
 
 /* Desktops and laptops ----------- */
 @media only screen 
-and (min-width : 1224px) {
+and (min-width : 1025px) {
 
-	//Pierrrreeee laaa mooullleeuuuh
+	header{
+		h1{
+			text-align: left;
+		}
+
+		nav{
+			border: 1px solid red;
+			display: inline-block;
+
+			ul{
+				padding:0;
+
+				li{
+					float: left;
+				}
+			}
+		}
+
+		#navicon{
+			display:none;
+		}
+	}
 
 }
 

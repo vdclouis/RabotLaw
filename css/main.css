@@ -81,14 +81,13 @@ body {
 
 #container {
   width: 90%;
-  margin: 0 auto;
-  border: 1px solid #bada55; }
+  margin: 0 auto; }
 
 header {
   color: #323232; }
   header h1 {
     font-family: 'Bitter', serif;
-    border: 1px solid red;
+    border-bottom: 1px solid #999999;
     text-align: center; }
   header #language-chooser {
     float: right; }
@@ -106,7 +105,8 @@ header {
     display: none; }
   header #navicon {
     float: right;
-    margin: -55px -65px 0 0; }
+    margin: -55px -74px 0 0;
+    width: 20px; }
 
 .law .rightscontainer {
   margin: 0 auto;
@@ -142,6 +142,18 @@ footer {
   header #navicon {
     display: none; } }
 /* Desktops and laptops ----------- */
+@media only screen and (min-width: 1025px) {
+  header h1 {
+    text-align: left; }
+  header nav {
+    border: 1px solid red;
+    display: inline-block; }
+    header nav ul {
+      padding: 0; }
+      header nav ul li {
+        float: left; }
+  header #navicon {
+    display: none; } }
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    Theses examples override the primary ('mobile first') styles.
