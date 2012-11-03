@@ -1,4 +1,10 @@
+#color
+
 font header color: #323232
 font p: #999999
 background color: #ececec
 footer color: #323232
+
+#other
+
+box radius: 5px
