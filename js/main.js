@@ -85,8 +85,9 @@ $(function(){
 		}); //eo ajax
 	}); //eo click
 
+
 	//change page -> template on click
-	$('nav a').click(function(){
+	$('nav a, .rightbox a').click(function(){
 		var page = $(this).attr('rel');
 		currentPage = page;
 
