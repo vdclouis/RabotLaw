@@ -139,16 +139,12 @@ header{
 	}
 
 	nav{
-		border: 1px solid red;
-		display: inline-block;
+		display:none;
+	}
 
-		ul{
-			padding:0;
-
-			li{
-				float: left;
-			}
-		}
+	#navicon{
+		float:right;
+		margin: -55px -65px 0 0;
 	}
 }
 
@@ -223,32 +219,6 @@ footer{
 	}
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1200px) {
-
-	.rightscontainer{
-
-		.rightbox{
-			float: left;
-		}
-
-		.maritime{
-
-		}
-
-		.international{
-
-		}
-
-		.family{
-
-		}
-
-		.arbitrage{
-			
-		}
-	}
-}
-
 /* iPads (portrait and landscape) ----------- */
 @media only screen 
 and (min-width : 768px) 
@@ -258,8 +228,33 @@ and (max-width : 1024px) {
 		h1{
 			text-align: left;
 		}
+
+		nav{
+			border: 1px solid red;
+			display: inline-block;
+
+			ul{
+				padding:0;
+
+				li{
+					float: left;
+				}
+			}
+		}
+
+		#navicon{
+			display:none;
+		}
 	}
 	
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+
+	//Pierrrreeee laaa mooullleeuuuh
+
 }
 
 
