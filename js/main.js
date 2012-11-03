@@ -5,8 +5,6 @@ if(localStorage.getItem('rabotlaw-language') === null){
 }
 
 $(function(){
-	
-	
 	//set data in localstorage
 	//page
 	var page = "home";
@@ -25,7 +23,6 @@ $(function(){
 	//get data from ls
 	currentPage = localStorage.getItem('rabotlaw-page');
 	currentLang = localStorage.getItem('rabotlaw-language');
-
 
 	//load localStorage lang & page on first pageload
 	$.ajax({
@@ -54,7 +51,6 @@ $(function(){
 			console.log('jsonerror');
 		}
 	});
-
 
 	//change language -> JSON files on click
 	$('#language-chooser a').click( function() {
