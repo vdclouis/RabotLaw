@@ -1,1 +1,1 @@
-$(function(){$("#navicon").toggle(function(){$(".menublock").show("blind",{direction:"vertical"},500)},function(){$(".menublock").hide("blind",{direction:"vertical"},500)})});
+$(function(){$("#navicon").click(function(){console.profile("meeh");$(".menublock").toggleClass("hidden");$(".menucontainer").toggleClass("height");console.profileEnd("meeh")})});

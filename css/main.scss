@@ -111,22 +111,67 @@ body{
 	//border: 1px solid $badass;
 }
 
+div.open{
+	-webkit-transition-property: height;
+	-webkit-transition-duration: 0.2s;
+	-webkit-transition-delay: 0s;
+	height: 100px;
+	-webkit-transform: translateZ(0);
+	-webkit-transition-timing-function: linear;
+}
+
+.menucontainer .hidden{
+	-webkit-transform: translate3d(0,-100px,0);
+}
+
+.height{
+	height: 0px;
+}
+
 header{
 	color: $header;
+
 
 	h1{
 		font-family: 'Bitter', serif;
 		border-bottom: 1px solid $p;
-		text-align:center;
+		text-align: center;
 	}
+
+}
+
+.mobilemenu{
+	overflow: hidden;
+}
+.menucontainer{
+
+	//height: 200px; 
+	overflow: hidden;
+
+	
+}
+
 	.menublock{
-		display: none;
+
 		//height: 0;
-		padding-bottom: 20px;
+		//padding-bottom: 20px;
 		background-image: url('../img/dark_wall.png');
 		box-shadow: inset 0px 0px 2px 2px black;
+		/*
+		-webkit-transition-property: height;
+		-webkit-transition-duration: 0.2s;
+		-webkit-transition-delay: 0s;
+		-webkit-transform: translateZ(0);
+		-webkit-transition-timing-function: linear;
+		*/
+		-webkit-transition: -webkit-transform 0.2s linear; 
+		-webkit-transform: translate3d(0,0,0);
+
+
+
 		#language-chooser{
 			float: right;
+
 
 			ul{
 				list-style: none;
@@ -143,8 +188,8 @@ header{
 			}
 		}
 		nav{
-			height: 35px;
-			padding-top: 15px;
+			//height: 35px;
+			//padding-top: 15px;
 			ul{
 				margin: 0;
 				overflow: hidden;
@@ -161,11 +206,11 @@ header{
 		}
 	}
 
-	#navicon{
-		float:right;
-		//margin: -55px -74px 0 0;
-		width:20px;
-	}
+#navicon{
+	float:right;
+	//margin: -55px -74px 0 0;
+	width:20px;
+	margin-right: 10px;
 }
 
 #content{
@@ -268,7 +313,7 @@ and (max-width : 1024px) {
 		}
 
 		#navicon{
-			display:none;
+			//display:none;
 		}
 	}
 	
