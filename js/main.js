@@ -4,46 +4,41 @@ if(localStorage.getItem('rabotlaw-language') === null){
 	localStorage.setItem('rabotlaw-language', 'nl');
 }
 
-function getJson(currentLang) {
-	$.ajax({
-		type: 'GET',
-		contentType: 'application/json',
-		dataType: 'json',
-		url: 'data/texts-'+ currentLang +'.json',
-		success: function (jsonData) {
-			window.console.log('json get succes');
-			window.console.log("ajaxJson: "+jsonData);
-			return jsonData;
-		},
-		error: function() {
-			window.console.log('json get error');
-		}
-	});
-}
-
-function getHtml(currentPage, jsonData) {
+function getHtml(currentPage, jsonData, callback) {
 	$.ajax({
 		url: 'templates/'+ currentPage +'.html',
 		type: "GET",
 		dataType: "html",
 		success: function(template) {
-
-			window.console.log('get html template succes: '+template);
-			
-			//window.console.log('html:'+theHTML);
-
-			return theHTML;
-			// $("#content").html(theHTML);
+			var theMerged = Mustache.to_html(template, jsonData);
+			callback(theMerged);
 		},
 		error: function(){
-			//alert('error in render()');
 			console.log('htmlerror');
 		}
 	});
 }
 
+function supports_html5_storage() {
+  try {
+    return 'localStorage' in window && window['localStorage'] !== null;
+  } catch (e) {
+  	window.console.log(e);
+    return false;
+  }
+}
 
 $(function(){
+
+	//supports_html5_storage();
+
+	if (Modernizr.localstorage) {
+	  // window.localStorage is available!
+	} else {
+	  // no native support for HTML5 storage :(
+	  // maybe try dojox.storage or a third-party solution
+	}
+
 	//set data in localstorage
 	//page
 	var page = "home";
@@ -70,21 +65,13 @@ $(function(){
 		dataType: 'json',
 		url: 'data/texts-'+ currentLang +'.json',
 		success: function(jsonData) {
-			window.console.log('jsonsucces');
-			$.ajax({
-				url: 'templates/'+ currentPage +'.html',
-				type: "GET",
-				dataType: "html",
-				success: function(template) {
-					window.console.log('htmlsucces');
-					theHTML = Mustache.to_html(template, jsonData);
-					$("#content").html(theHTML);
-				},
-				error: function(){
-					//alert('error in render()');
-					console.log('htmlerror');
+			getHtml(
+				currentPage,
+				jsonData,
+				function (html) {
+					$('#content').empty().append(html);
 				}
-			});
+			);
 		},
 		error: function() {
 			console.log('jsonerror');
@@ -102,86 +89,40 @@ $(function(){
 			dataType: 'json',
 			url: 'data/texts-'+ lang +'.json',
 			success: function(jsonData) {
-				window.console.log('jsonsucces');
-				$.ajax({
-					url: 'templates/'+ currentPage +'.html',
-					type: "GET",
-					dataType: "html",
-					success: function(template) {
-						window.console.log('htmlsucces');
-						theHTML = Mustache.to_html(template, jsonData);
-						$("#content").html(theHTML);
-					},
-					error: function(){
-						alert('error in render()');
-						window.console.log('htmlerror');
+				getHtml(
+					currentPage,
+					jsonData,
+					function (html) {
+						$('#content').empty().append(html);
 					}
-				});
+				);
 			},
 			error: function() {
 				window.console.log('jsonerror');
 			}
-		}); //eo ajax
-	}); //eo click
-
+		});
+	});
 
 	//change page -> template on click
 	$('nav a').click(function(){
-		//window.console.log('click');
-		var page = $(this).attr('rel');
-		currentPage = page;
-
-		// var json = getPage(
-		// 	currentLang, 
-		// 	currentPage, 
-		// 	function(theMerged) {
-				
-		// 	});
-		var jsonData = getJson(currentLang);
-		var htmlData = getHtml(page);
-		window.console.log("json: "+jsonData);
-		window.console.log("html: "+htmlData);
-		var theMerged = Mustache.to_html(htmlData, jsonData);
-		$("#content").empty().html(theMerged);
-
-		window.console.log('jay:'+json);
-		//$("#content").html(json);
-/*
+		var currentPage = $(this).attr('rel');
 		$.ajax({
 			type: 'GET',
 			contentType: 'application/json',
 			dataType: 'json',
 			url: 'data/texts-'+ currentLang +'.json',
 			success: function (jsonData) {
-				merge(currentPage, jsonData);
-				$("#content").html(theHTML);
-
-				$('.rightbox a').click(function(){
-					window.console.log('click');
-					var subpage = $(this).attr('rel');
-
-
-
-					return false;
-				});
+				getHtml(
+					currentPage,
+					jsonData,
+					function (html) {
+						$('#content').empty().append(html);
+					}
+				);
 			},
 			error: function() {
-				window.console.log('jsonerror');
+				window.console.log('json get error');
 			}
-		}); //eo ajax
-*/
+		});
 	}); //eo click
 }); //eo doc ready
-
-/*
-$.ajax({
-	type: 'GET',
-	contentType: 'application/json',
-	dataType: 'json',
-	url: 'data/texts-'+ currentLang +'.json',
-	success: function (jsonData) {
-		merge(currentPage, jsonData);
-		$("#content").html(theHTML);
-	},
-	//error: 
-	*/
