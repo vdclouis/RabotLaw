@@ -20,23 +20,35 @@ function getHtml(currentPage, jsonData, callback) {
 }
 
 function supports_html5_storage() {
-  try {
-    return 'localStorage' in window && window['localStorage'] !== null;
-  } catch (e) {
-  	window.console.log(e);
-    return false;
-  }
+	try {
+		return 'localStorage' in window && window['localStorage'] !== null;
+	} catch (e) {
+		window.console.log(e);
+		return false;
+	}
+}
+
+var pageEvents = {
+	home: function () {
+		$('.law a').click( function () {
+			window.console.log("yoyo");
+		});
+	}
 }
 
 $(function(){
 
+	$('#icon').click( function () {
+		$('.menu').toggle();
+	});
+
 	//supports_html5_storage();
 
 	if (Modernizr.localstorage) {
-	  // window.localStorage is available!
+		// window.localStorage is available!
 	} else {
-	  // no native support for HTML5 storage :(
-	  // maybe try dojox.storage or a third-party solution
+		// no native support for HTML5 storage :(
+		// maybe try dojox.storage or a third-party solution
 	}
 
 	//set data in localstorage
@@ -69,7 +81,11 @@ $(function(){
 				currentPage,
 				jsonData,
 				function (html) {
+					//EMPTY THE CONTENT AND APPEND THE HTML
 					$('#content').empty().append(html);
+					//LOAD THE PAGE FUNCTIONS
+					var currentPageEvents = pageEvents[currentPage];
+					currentPageEvents();
 				}
 			);
 		},
@@ -82,7 +98,8 @@ $(function(){
 	$('#language-chooser a').click( function() {
 		var lang = $(this).attr('rel');
 		currentLang = lang;
-
+		currentPage = localStorage.getItem('rabotlaw-page');
+		window.console.log(currentPage);
 		$.ajax({
 			type: 'GET',
 			contentType: 'application/json',
@@ -125,4 +142,5 @@ $(function(){
 			}
 		});
 	}); //eo click
+
 }); //eo doc ready

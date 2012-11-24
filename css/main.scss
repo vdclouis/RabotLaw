@@ -106,7 +106,7 @@ body{
 }
 
 #container{
-	width:90%;
+	width: 90%;
 	margin: 0 auto;
 	border: 1px solid $badass;
 }
@@ -119,44 +119,49 @@ header{
 		border: 1px solid red;
 		text-align:center;
 	}
+	.menu{
+		#icon{
 
-	#language-chooser{
-		float: right;
+		}
+		#language-chooser{
+			float: right;
 
-		ul{
-			list-style: none;
+			ul{
+				list-style: none;
+				border: 1px solid red;
+				padding: 0;
+				margin: 0;
+				overflow: hidden;
+
+				li{
+					float:left;
+					margin-right: 10px;
+					cursor: pointer;
+				}
+			}
+		}
+
+		nav{
 			border: 1px solid red;
-			padding: 0;
-			margin: 0;
-			overflow: hidden;
+			display: inline-block;
 
-			li{
-				float:left;
-				margin-right:10px;
-				cursor: pointer;
-			}
-		}
-	}
+			ul{
+				padding:0;
 
-	nav{
-		border: 1px solid red;
-		display: inline-block;
+				li{
+					float: left;
+					a{
 
-		ul{
-			padding:0;
-
-			li{
-				float: left;
-				a{
-
-				}
-				a:hover, a:active, a:focus {
-					outline: 0;
-					border: 0;
+						&:hover, &:active, &:focus {
+							outline: 0;
+							border: 0;
+						}
+					}
 				}
 			}
 		}
 	}
+
 }
 
 .law{
@@ -172,16 +177,16 @@ header{
 		overflow: hidden;
 
 		.rightbox{
-			width: 80%;
-			border: 1px solid black;
+			width: 50%;
+			//border: 1px solid black;
 			float: left;
 
 			img{
 				height: 100px;
 				width: 90%;
 				margin: 0 auto;
-				border: 1px dashed pink;
 				display: block;
+
 			}
 
 			p{

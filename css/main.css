@@ -90,26 +90,26 @@ header {
     font-family: 'Bitter', serif;
     border: 1px solid red;
     text-align: center; }
-  header #language-chooser {
+  header .menu #language-chooser {
     float: right; }
-    header #language-chooser ul {
+    header .menu #language-chooser ul {
       list-style: none;
       border: 1px solid red;
       padding: 0;
       margin: 0;
       overflow: hidden; }
-      header #language-chooser ul li {
+      header .menu #language-chooser ul li {
         float: left;
         margin-right: 10px;
         cursor: pointer; }
-  header nav {
+  header .menu nav {
     border: 1px solid red;
     display: inline-block; }
-    header nav ul {
+    header .menu nav ul {
       padding: 0; }
-      header nav ul li {
+      header .menu nav ul li {
         float: left; }
-        header nav ul li a:hover, header nav ul li a:active, header nav ul li a:focus {
+        header .menu nav ul li a:hover, header .menu nav ul li a:active, header .menu nav ul li a:focus {
           outline: 0;
           border: 0; }
 
@@ -117,14 +117,12 @@ header {
   margin: 0 auto;
   overflow: hidden; }
   .law .rightscontainer .rightbox {
-    width: 80%;
-    border: 1px solid black;
+    width: 50%;
     float: left; }
     .law .rightscontainer .rightbox img {
       height: 100px;
       width: 90%;
       margin: 0 auto;
-      border: 1px dashed pink;
       display: block; }
 
 footer {
