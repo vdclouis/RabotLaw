@@ -48,7 +48,8 @@ var pageEvents = {
 				}
 			});
 		});
-	}
+	},
+	
 }
 
 $(function(){
