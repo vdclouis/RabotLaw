@@ -86,32 +86,50 @@ body {
 
 header {
   color: #323232; }
-  header h1 {
-    font-family: 'Bitter', serif;
-    border: 1px solid red;
-    text-align: center; }
-  header .menu #language-chooser {
-    float: right; }
-    header .menu #language-chooser ul {
-      list-style: none;
-      border: 1px solid red;
-      padding: 0;
-      margin: 0;
-      overflow: hidden; }
-      header .menu #language-chooser ul li {
-        float: left;
-        margin-right: 10px;
-        cursor: pointer; }
-  header .menu nav {
-    border: 1px solid red;
-    display: inline-block; }
-    header .menu nav ul {
-      padding: 0; }
-      header .menu nav ul li {
-        float: left; }
-        header .menu nav ul li a:hover, header .menu nav ul li a:active, header .menu nav ul li a:focus {
-          outline: 0;
-          border: 0; }
+  header .title {
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid #323232; }
+    header .title h1 {
+      text-align: left;
+      float: left; }
+      header .title h1 a {
+        font-family: 'Bitter', serif;
+        text-decoration: none;
+        color: #323232; }
+    header .title .menuicon {
+      position: absolute;
+      right: 0; }
+  header .menu {
+    overflow: hidden;
+    border-bottom: 1px solid #323232; }
+    header .menu #language-chooser {
+      float: right; }
+      header .menu #language-chooser ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        overflow: hidden; }
+        header .menu #language-chooser ul li {
+          float: left;
+          margin-right: 10px;
+          cursor: pointer; }
+          header .menu #language-chooser ul li a img {
+            display: none; }
+    header .menu nav {
+      display: inline-block; }
+      header .menu nav ul {
+        padding: 0;
+        overflow: hidden; }
+        header .menu nav ul li {
+          float: left; }
+          header .menu nav ul li a {
+            text-decoration: none;
+            color: #323232;
+            margin-right: 20px; }
+            header .menu nav ul li a:hover, header .menu nav ul li a:active, header .menu nav ul li a:focus {
+              outline: 0;
+              border: 0; }
 
 .law .rightscontainer {
   margin: 0 auto;
@@ -122,8 +140,18 @@ header {
     .law .rightscontainer .rightbox img {
       height: 100px;
       width: 90%;
-      margin: 0 auto;
+      margin: 0 auto 20px auto;
       display: block; }
+    .law .rightscontainer .rightbox a {
+      text-decoration: none;
+      color: #323232;
+      margin-left: 20px;
+      display: block;
+      margin: 1em 0 1em 20px;
+      font-family: 'Miriad pro';
+      float: left; }
+      .law .rightscontainer .rightbox a:hover {
+        text-decoration: underline; }
 
 footer {
   color: #323232; }
