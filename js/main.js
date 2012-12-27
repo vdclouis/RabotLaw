@@ -54,8 +54,8 @@ var pageEvents = {
 
 $(function(){
 
-	//menu
-	$('#icon').click( function () {
+
+	$('#menuicon').click( function () {
 		$('.menu').toggle();
 	});
 
