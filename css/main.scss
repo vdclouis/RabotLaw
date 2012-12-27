@@ -96,10 +96,10 @@ textarea {
 @import url(http://fonts.googleapis.com/css?family=Bitter);
 
 $badass: #BADA55;
-$header: #323232;
+$darkgrey: #323232;
 $p: #999999;
 $bg: #ececec;
-$footer: #323232;
+
 
 body{
 	background-color:$bg;
@@ -112,8 +112,9 @@ body{
 }
 
 header{
-	color: $header;
+	color: $darkgrey;
 
+<<<<<<< HEAD
 	h1{
 		font-family: 'Bitter', serif;
 		border-bottom: 1px solid $p;
@@ -121,14 +122,36 @@ header{
 	}
 	.menu{
 		#icon{
+=======
+	.title{
+		overflow: hidden;
+		position: relative;
+		border-bottom: 1px solid $darkgrey;
+>>>>>>> jaja
 
+		h1{
+			text-align: left;
+			float: left;
+			a{
+				font-family: 'Bitter', serif;
+				text-decoration: none;
+				color: $darkgrey;
+			}
 		}
+		.menuicon{
+			position: absolute;
+			right: 0;
+		}
+	}
+	.menu{
+		overflow: hidden;
+		border-bottom: 1px solid $darkgrey;
+		
 		#language-chooser{
 			float: right;
 
 			ul{
 				list-style: none;
-				border: 1px solid red;
 				padding: 0;
 				margin: 0;
 				overflow: hidden;
@@ -137,22 +160,32 @@ header{
 					float:left;
 					margin-right: 10px;
 					cursor: pointer;
+					a{
+						img{
+							display: none;
+						}
+						p{
+							//display: none;
+						}
+					}
 				}
 			}
 		}
 
 
 		nav{
-			border: 1px solid red;
 			display: inline-block;
 
 			ul{
 				padding:0;
+				overflow: hidden;
 
 				li{
 					float: left;
 					a{
-
+						text-decoration: none;
+						color: $darkgrey;
+						margin-right: 20px;
 						&:hover, &:active, &:focus {
 							outline: 0;
 							border: 0;
@@ -167,7 +200,6 @@ header{
 		margin: -55px -74px 0 0;
 		width:20px;
 	}
-
 }
 
 .law{
@@ -190,9 +222,21 @@ header{
 			img{
 				height: 100px;
 				width: 90%;
-				margin: 0 auto;
+				margin: 0 auto 20px auto;
 				display: block;
+			}
 
+			a{
+				text-decoration: none;
+				color: $darkgrey;
+				margin-left: 20px;
+				display: block;
+				margin: 1em 0 1em 20px;
+				font-family: 'Miriad pro';
+				float: left;
+				&:hover{
+					text-decoration: underline;
+				}
 			}
 
 			p{
@@ -228,16 +272,15 @@ header{
 
 }
 
-.content{
-
+#content{
 }
 
 footer{
-	color: $footer;
+	color: $darkgrey;
 
 	a{
 		text-decoration:none;
-		color:$footer;
+		color: $darkgrey;
 	}
 }
 
