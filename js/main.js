@@ -38,7 +38,7 @@ var pageEvents = {
 
 $(function(){
 
-	$('#icon').click( function () {
+	$('#menuicon').click( function () {
 		$('.menu').toggle();
 	});
 

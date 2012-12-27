@@ -76,23 +76,15 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-body {
-  background-color: #ececec; }
-
-#container {
-  width: 90%;
-  margin: 0 auto; }
-
 header {
   color: #323232; }
   header h1 {
-    font-family: 'Bitter', serif;
-    border-bottom: 1px solid #999999;
-    text-align: center; }
-  header .menu .title {
+    font-family: 'Bitter', serif; }
+  header .title {
     overflow: hidden;
-    position: relative;
-    border-bottom: 1px solid #323232; }
+    position: relative; }
+    header .title .menuicon {
+      float: right; }
   header .menu h1 {
     text-align: left;
     float: left; }
@@ -100,12 +92,8 @@ header {
       font-family: 'Bitter', serif;
       text-decoration: none;
       color: #323232; }
-  header .menu .menuicon {
-    position: absolute;
-    right: 0; }
   header .menu {
-    overflow: hidden;
-    border-bottom: 1px solid #323232; }
+    overflow: hidden; }
     header .menu #language-chooser {
       float: right; }
       header .menu #language-chooser ul {
@@ -133,32 +121,40 @@ header {
             header .menu nav ul li a:hover, header .menu nav ul li a:active, header .menu nav ul li a:focus {
               outline: 0;
               border: 0; }
-    header .menu #navicon {
-      float: right;
-      margin: -55px -74px 0 0;
-      width: 20px; }
 
 .law .rightscontainer {
   margin: 0 auto;
-  overflow: hidden; }
+  overflow: hidden;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  background-color: #F5F5F5; }
   .law .rightscontainer .rightbox {
     width: 50%;
     float: left; }
-    .law .rightscontainer .rightbox img {
-      height: 100px;
+    .law .rightscontainer .rightbox .rightbutton {
       width: 90%;
-      margin: 0 auto 20px auto;
-      display: block; }
-    .law .rightscontainer .rightbox a {
-      text-decoration: none;
-      color: #323232;
-      margin-left: 20px;
-      display: block;
-      margin: 1em 0 1em 20px;
-      font-family: 'Miriad pro';
-      float: left; }
-      .law .rightscontainer .rightbox a:hover {
-        text-decoration: underline; }
+      margin: 0 auto; }
+      .law .rightscontainer .rightbox .rightbutton img {
+        height: 100px;
+        margin: 0 auto 0px auto;
+        display: block; }
+      .law .rightscontainer .rightbox .rightbutton .title {
+        background-color: #DDDDDD;
+        display: block;
+        margin: 0 auto;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px; }
+        .law .rightscontainer .rightbox .rightbutton .title a {
+          text-decoration: none;
+          color: #323232;
+          font-family: 'Miriad pro';
+          margin-left: 10px; }
+      .law .rightscontainer .rightbox .rightbutton:hover {
+        cursor: pointer; }
+        .law .rightscontainer .rightbox .rightbutton:hover .title {
+          background-color: #58A2CB; }
+          .law .rightscontainer .rightbox .rightbutton:hover .title a {
+            color: white; }
 
 footer {
   color: #323232; }

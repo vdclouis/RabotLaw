@@ -99,15 +99,15 @@ $badass: #BADA55;
 $darkgrey: #323232;
 $p: #999999;
 $bg: #ececec;
-
+$border: 1px solid grey;
 
 body{
-	background-color:$bg;
+	//background-color:$bg;
 }
 
 #container{
-	width: 90%;
-	margin: 0 auto;
+	//width: 90%;
+	//margin: 0 auto;
 	//border: 1px solid $badass;
 }
 
@@ -116,15 +116,17 @@ header{
 
 	h1{
 		font-family: 'Bitter', serif;
-		border-bottom: 1px solid $p;
-		text-align:center;
+		//border-bottom: 1px solid $p;
+	}
+	.title{
+		overflow: hidden;
+		position: relative;
+		//border-bottom: 1px solid $darkgrey;
+		.menuicon{
+			float: right;
+		}
 	}
 	.menu{
-			.title{
-				overflow: hidden;
-				position: relative;
-				border-bottom: 1px solid $darkgrey;
-			}
 		h1{
 			text-align: left;
 			float: left;
@@ -134,16 +136,12 @@ header{
 				color: $darkgrey;
 			}
 		}
-		.menuicon{
-			position: absolute;
-			right: 0;
-		}
 	}
 	
 
 	.menu{
 		overflow: hidden;
-		border-bottom: 1px solid $darkgrey;
+		//border-bottom: 1px solid $darkgrey;
 		
 		#language-chooser{
 			float: right;
@@ -192,13 +190,11 @@ header{
 				}
 			}
 		}
-
-		#navicon{
-			float:right;
-			margin: -55px -74px 0 0;
-			width:20px;
-		}
 	}
+}
+
+#content{
+
 }
 
 .law{
@@ -212,31 +208,55 @@ header{
 	.rightscontainer{
 		margin: 0 auto;
 		overflow: hidden;
+		border-top: $border;
+		border-bottom: $border;
+		background-color: #F5F5F5;
 
 		.rightbox{
 			width: 50%;
 			//border: 1px solid black;
 			float: left;
 
-			img{
-				height: 100px;
+			.rightbutton{
 				width: 90%;
-				margin: 0 auto 20px auto;
-				display: block;
-			}
+				margin: 0 auto;
+				img{
+					height: 100px;
+					margin: 0 auto 0px auto;
+					display: block;
+				}
 
-			a{
-				text-decoration: none;
-				color: $darkgrey;
-				margin-left: 20px;
-				display: block;
-				margin: 1em 0 1em 20px;
-				font-family: 'Miriad pro';
-				float: left;
+				.title{
+					background-color: #DDDDDD;
+					display: block;
+					margin: 0 auto;
+					border-bottom-left-radius: 5px;
+					border-bottom-right-radius: 5px;
+
+
+					a{
+						text-decoration: none;
+						color: $darkgrey;
+						font-family: 'Miriad pro';
+						margin-left: 10px;
+
+					}
+				}
 				&:hover{
-					text-decoration: underline;
+					cursor: pointer;
+					.title{
+						background-color: #58A2CB;
+						a{
+							color: white;
+						}
+					}
 				}
 			}
+
+
+
+
+			
 
 			p{
 
@@ -271,8 +291,7 @@ header{
 
 }
 
-#content{
-}
+
 
 footer{
 	color: $darkgrey;
