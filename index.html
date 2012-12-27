@@ -58,14 +58,14 @@
 				</div>
 			</header>
 			
-			<div id="content" ng-controller="HomeCtrl">
+			<div id="content" ng-controller="DefaultCtrl">
 				<div class="law">
 					<div class="rightscontainer">
 						<div class="rightbox maritime">
 							<div class="rightbutton">
 								<img src="" alt="">
 								<div class="title">
-									<a href="#maritime" rel="maritime">{{maritimetitle}}</a>
+									<a href="#maritime" rel="maritime">{{data.maritimetitle}}</a>
 								</div>
 							</div>
 						</div>
@@ -73,7 +73,7 @@
 							<div class="rightbutton">
 								<img src="" alt="">
 								<div class="title">
-									<a href="#international" rel="international">{{internationaltitle}}</a>
+									<a href="#international" rel="international">{{data.internationaltitle}}</a>
 								</div>
 							</div>
 						</div>
@@ -81,7 +81,7 @@
 							<div class="rightbutton">
 								<img src="" alt="">
 								<div class="title">
-									<a href="#family" rel="family">{{familytitle}}</a>
+									<a href="#family" rel="family">{{data.familytitle}}</a>
 								</div>
 							</div>
 						</div>
@@ -89,13 +89,13 @@
 							<div class="rightbutton">
 								<img src="" alt="">
 								<div class="title">
-									<a href="#arbitrage" rel="arbitrage">{{arbitragetitle}}</a>
+									<a href="#arbitrage" rel="arbitrage">{{data.arbitragetitle}}</a>
 								</div>
 							</div>
 						</div>
 					</div>
-					<h1>{{title}}</h1>
-					<p>{{body}}</p>
+					<h1>{{data.title}}</h1>
+					<p>{{data.body}}</p>
 				</div>
 			</div>
 			

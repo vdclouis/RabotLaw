@@ -1,57 +1,41 @@
 // set default value when localStorage is empty
-if(localStorage.getItem('rabotlaw-language') === null){
+if (localStorage.getItem('rabotlaw-language') === null)
+{
 	localStorage.setItem('rabotlaw-page', 'home');
 	localStorage.setItem('rabotlaw-language', 'nl');
 }
 
-
-function supports_html5_storage() {
-	try {
-		return 'localStorage' in window && window['localStorage'] !== null;
-	} catch (e) {
-		console.log(e);
-		return false;
-	}
-}
+//get data from ls
+var currentPage = localStorage.getItem('rabotlaw-page');
+var currentLang = localStorage.getItem('rabotlaw-language');
 
 
-$(function(){
 
-	$('#menuicon').click( function () {
-		$('.menu').toggle();
-	});
-
+$(function() {
 	//set data in localstorage
 	//page
-	var page = "home";
 	$('nav a').click(function() {
 		var page = $(this).attr('rel');
 		localStorage.setItem('rabotlaw-page', page);
 	});
 
 	//lang
-	var lang = "nl";
 	$('#language-chooser a').click(function() {
 		var lang = $(this).attr('rel');
 		localStorage.setItem('rabotlaw-language', lang);
+		console.log('klik');
+		window.location.reload(true);
 	});
+});
 
-	//get data from ls
-	currentPage = localStorage.getItem('rabotlaw-page');
-	currentLang = localStorage.getItem('rabotlaw-language');
-	
-}); //eo doc ready
 
-function HomeCtrl($scope) {
-
+//controllers
+//default controller
+function DefaultCtrl($scope, $http) {
+	$http.get('data/texts-' + currentLang + '.json').success(function(data){
+		$scope.data = data;
+	});
 }
-
-
-
-
-
-
-
 
 
 
