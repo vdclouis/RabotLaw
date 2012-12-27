@@ -117,6 +117,9 @@ header{
 	h1{
 		font-family: 'Bitter', serif;
 		//border-bottom: 1px solid $p;
+		a{
+			text-decoration: none;
+		}
 	}
 	.title{
 		overflow: hidden;

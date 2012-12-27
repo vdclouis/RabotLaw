@@ -80,6 +80,8 @@ header {
   color: #323232; }
   header h1 {
     font-family: 'Bitter', serif; }
+    header h1 a {
+      text-decoration: none; }
   header .title {
     overflow: hidden;
     position: relative; }
