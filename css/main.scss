@@ -108,7 +108,7 @@ body{
 #container{
 	width: 90%;
 	margin: 0 auto;
-	border: 1px solid $badass;
+	//border: 1px solid $badass;
 }
 
 header{
@@ -116,7 +116,7 @@ header{
 
 	h1{
 		font-family: 'Bitter', serif;
-		border: 1px solid red;
+		border-bottom: 1px solid $p;
 		text-align:center;
 	}
 	.menu{
@@ -141,6 +141,7 @@ header{
 			}
 		}
 
+
 		nav{
 			border: 1px solid red;
 			display: inline-block;
@@ -160,6 +161,11 @@ header{
 				}
 			}
 		}
+
+	#navicon{
+		float:right;
+		margin: -55px -74px 0 0;
+		width:20px;
 	}
 
 }
@@ -235,32 +241,6 @@ footer{
 	}
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1200px) {
-
-	.rightscontainer{
-
-		.rightbox{
-			float: left;
-		}
-
-		.maritime{
-
-		}
-
-		.international{
-
-		}
-
-		.family{
-
-		}
-
-		.arbitrage{
-			
-		}
-	}
-}
-
 /* iPads (portrait and landscape) ----------- */
 @media only screen 
 and (min-width : 768px) 
@@ -270,8 +250,54 @@ and (max-width : 1024px) {
 		h1{
 			text-align: left;
 		}
+
+		nav{
+			border: 1px solid red;
+			display: inline-block;
+
+			ul{
+				padding:0;
+
+				li{
+					float: left;
+				}
+			}
+		}
+
+		#navicon{
+			display:none;
+		}
 	}
 	
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1025px) {
+
+	header{
+		h1{
+			text-align: left;
+		}
+
+		nav{
+			border: 1px solid red;
+			display: inline-block;
+
+			ul{
+				padding:0;
+
+				li{
+					float: left;
+				}
+			}
+		}
+
+		#navicon{
+			display:none;
+		}
+	}
+
 }
 
 

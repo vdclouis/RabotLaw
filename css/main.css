@@ -81,14 +81,13 @@ body {
 
 #container {
   width: 90%;
-  margin: 0 auto;
-  border: 1px solid #bada55; }
+  margin: 0 auto; }
 
 header {
   color: #323232; }
   header h1 {
     font-family: 'Bitter', serif;
-    border: 1px solid red;
+    border-bottom: 1px solid #999999;
     text-align: center; }
   header .menu #language-chooser {
     float: right; }
@@ -102,6 +101,7 @@ header {
         float: left;
         margin-right: 10px;
         cursor: pointer; }
+
   header .menu nav {
     border: 1px solid red;
     display: inline-block; }
@@ -112,6 +112,11 @@ header {
         header .menu nav ul li a:hover, header .menu nav ul li a:active, header .menu nav ul li a:focus {
           outline: 0;
           border: 0; }
+
+  header #navicon {
+    float: right;
+    margin: -55px -74px 0 0;
+    width: 20px; }
 
 .law .rightscontainer {
   margin: 0 auto;
@@ -131,15 +136,34 @@ footer {
     text-decoration: none;
     color: #323232; }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1200px) {
-  .rightscontainer .rightbox {
-    float: left; } }
 /* iPads (portrait and landscape) ----------- */
 @media only screen 
 and (min-width : 768px) 
 and (max-width : 1024px) {
   header h1 {
-    text-align: left; } }
+    text-align: left; }
+  header nav {
+    border: 1px solid red;
+    display: inline-block; }
+    header nav ul {
+      padding: 0; }
+      header nav ul li {
+        float: left; }
+  header #navicon {
+    display: none; } }
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1025px) {
+  header h1 {
+    text-align: left; }
+  header nav {
+    border: 1px solid red;
+    display: inline-block; }
+    header nav ul {
+      padding: 0; }
+      header nav ul li {
+        float: left; }
+  header #navicon {
+    display: none; } }
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    Theses examples override the primary ('mobile first') styles.
