@@ -31,13 +31,29 @@ function supports_html5_storage() {
 var pageEvents = {
 	home: function () {
 		$('.law a').click( function () {
-			window.console.log("yoyo");
+			console.log("klik");
+			var currentPage = $(this).attr('rel');
+			$.ajax({
+				type: 'get',
+				contentType: 'application/json',
+				dataType: 'json',
+				url: 'data/texts-'+ currentLang +'.json',
+				success: function (jsonData) {
+					getHtml(currentPage, jsonData, function (html) {
+						$('#content').empty().append(html);
+					});
+				},
+				error: function() {
+					console.log('json error');
+				}
+			});
 		});
 	}
 }
 
 $(function(){
 
+	//menu
 	$('#icon').click( function () {
 		$('.menu').toggle();
 	});
@@ -99,7 +115,7 @@ $(function(){
 		var lang = $(this).attr('rel');
 		currentLang = lang;
 		currentPage = localStorage.getItem('rabotlaw-page');
-		window.console.log(currentPage);
+		console.log(currentPage);
 		$.ajax({
 			type: 'GET',
 			contentType: 'application/json',
@@ -111,6 +127,8 @@ $(function(){
 					jsonData,
 					function (html) {
 						$('#content').empty().append(html);
+						var currentPageEvents = pageEvents[currentPage];
+						currentPageEvents();
 					}
 				);
 			},
@@ -128,12 +146,14 @@ $(function(){
 			contentType: 'application/json',
 			dataType: 'json',
 			url: 'data/texts-'+ currentLang +'.json',
-			success: function (jsonData) {
+			success: function(jsonData) {
 				getHtml(
 					currentPage,
 					jsonData,
 					function (html) {
 						$('#content').empty().append(html);
+						var currentPageEvents = pageEvents[currentPage];
+						currentPageEvents();
 					}
 				);
 			},
@@ -142,5 +162,62 @@ $(function(){
 			}
 		});
 	}); //eo click
-
 }); //eo doc ready
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
