@@ -23,7 +23,7 @@ function supports_html5_storage() {
 	try {
 		return 'localStorage' in window && window['localStorage'] !== null;
 	} catch (e) {
-		window.console.log(e);
+		console.log(e);
 		return false;
 	}
 }
@@ -41,6 +41,7 @@ var pageEvents = {
 				success: function (jsonData) {
 					getHtml(currentPage, jsonData, function (html) {
 						$('#content').empty().append(html);
+						console.log('SUCK sex')
 					});
 				},
 				error: function() {

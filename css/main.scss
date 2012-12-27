@@ -113,9 +113,11 @@ body{
 
 header{
 	color: $darkgrey;
+	padding: 0 20px;
 
 	h1{
 		font-family: 'Bitter', serif;
+		text-align: center;
 		//border-bottom: 1px solid $p;
 	}
 	.title{
@@ -194,7 +196,7 @@ header{
 }
 
 #content{
-
+	padding: 0 20px;
 }
 
 .law{
@@ -294,6 +296,7 @@ header{
 
 
 footer{
+	padding: 0 20px;
 	background: #111;
 	color: #888;
 	width: 100%;
@@ -360,6 +363,20 @@ and (max-width : 1024px) {
 
 		#navicon{
 			display:none;
+		}
+	}
+
+	#content{
+		#columns{
+			-webkit-column-count: 3;
+			-moz-column-count: 3;
+			column-count: 3;
+
+			p{
+				&:first-child{
+					margin: 0;
+				}
+			}
 		}
 	}
 	
