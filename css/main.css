@@ -77,9 +77,11 @@ textarea {
    Author's custom styles
    ========================================================================== */
 header {
-  color: #323232; }
+  color: #323232;
+  padding: 0 20px; }
   header h1 {
-    font-family: 'Bitter', serif; }
+    font-family: 'Bitter', serif;
+    text-align: center; }
     header h1 a {
       text-decoration: none; }
   header .title {
@@ -124,6 +126,9 @@ header {
               outline: 0;
               border: 0; }
 
+#content {
+  padding: 0 20px; }
+
 .law .rightscontainer {
   margin: 0 auto;
   overflow: hidden;
@@ -159,6 +164,7 @@ header {
             color: white; }
 
 footer {
+  padding: 0 20px;
   background: #111;
   color: #888;
   width: 100%; }
@@ -195,7 +201,14 @@ and (max-width : 1024px) {
       header nav ul li {
         float: left; }
   header #navicon {
-    display: none; } }
+    display: none; }
+
+  #content #columns {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3; }
+    #content #columns p:first-child {
+      margin: 0; } }
 /* Desktops and laptops ----------- */
 @media only screen 
 and (min-width : 1025px) {
