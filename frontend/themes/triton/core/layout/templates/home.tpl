@@ -32,12 +32,6 @@
 					{$positionTop.blockContent}
 				{/iteration:positionTop}
 
-				{* Breadcrumb *}
-				<div id="breadcrumb">
-					<h4>{$lblBreadcrumb|ucfirst}</h4>
-					{include:core/layout/templates/breadcrumb.tpl}
-				</div>
-
 				{* Advertisement position *}
 				{iteration:positionAdvertisement}
 					{option:positionAdvertisement.blockIsHTML}
@@ -49,7 +43,6 @@
 						{$positionAdvertisement.blockContent}
 					{/option:!positionAdvertisement.blockIsHTML}
 				{/iteration:positionAdvertisement}
-
 			</div>
 
 		</header>
@@ -60,11 +53,11 @@
 				<div class="col col-12 lastCol">
 
 					{* Page title *}
-					{option:!hideContentTitle}
+					{option:hideContentTitle}
 						<header class="mainTitle">
 							<h1>{$page.title}</h1>
 						</header>
-					{/option:!hideContentTitle}
+					{/option:hideContentTitle}
 
 					{* Main position *}
 					{iteration:positionMain}

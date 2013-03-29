@@ -427,7 +427,7 @@ class BackendPagesModel
 	public static function copy($from, $to)
 	{
 		// get db
-		$db = BackendModel::getDB(true);
+		$db = BackendModel::getContainer()->get('database');
 
 		// copy contentBlocks and get copied contentBlockIds
 		$contentBlockIds = BackendContentBlocksModel::copy($from, $to);
@@ -483,7 +483,7 @@ class BackendPagesModel
 		$db->delete('search_index', 'module = ? AND language = ?', array('pages', $to));
 
 		// get all active pages
-		$ids = BackendModel::getDB()->getColumn(
+		$ids = BackendModel::getContainer()->get('database')->getColumn(
 			'SELECT id
 			 FROM pages AS i
 			 WHERE i.language = ? AND i.status = ?',
