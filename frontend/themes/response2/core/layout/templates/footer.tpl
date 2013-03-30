@@ -4,8 +4,8 @@
 				<h3>LINKS</h3>
 				<ul class="links">
 					<li><a href="/">LAW</a></li>
-					<li><a href="nl/team">TEAM</a></li>
-					<li><a href="nl/contact">CONTACT</a></li>
+					<li><a href="/nl/team">TEAM</a></li>
+					<li><a href="/nl/contact">CONTACT</a></li>
 				</ul>
 				<p class="copyright">&copy; {$now|date:'Y'} {$siteTitle} - Developed by <a href="http://integralstudios.be">▲</a></p>
 			</div>

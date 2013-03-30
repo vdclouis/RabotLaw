@@ -162,7 +162,15 @@ h1, h3 {
     color: #181818;
 }
 
-.feature{
+#sub-title{
+    display: none;
+}
+
+.home-content{
+    margin-left: 20px;
+}
+
+.feature {
     //text-align: center;
     padding: 20px;
     border-top: 1px solid $border;
@@ -171,6 +179,18 @@ h1, h3 {
 
     p {
         width: 100%;
+    }
+
+    a {
+        width: 45%;
+        
+        &:nth-child(odd){
+            margin-right: 24px;
+        }
+
+        img {
+            width: 45%;
+        }
     }
 }
 
@@ -218,6 +238,14 @@ figure {
     figcaption {
         display: table;
     }
+}
+
+.expander {
+    background: #181818;
+    //height: 100px;
+    width: 100%;
+    margin-bottom: 6px;
+    float: left;
 }
 
 /* Header */
@@ -449,6 +477,9 @@ footer {
    ========================================================================== */
 
 @media only screen and (min-width: 321px) {
+    #sub-title{
+        display: block;
+    }
     .mainnav {
         display: block !important;
     }

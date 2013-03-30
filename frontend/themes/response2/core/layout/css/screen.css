@@ -130,6 +130,12 @@ body {
 h1, h3 {
   color: #181818; }
 
+#sub-title {
+  display: none; }
+
+.home-content {
+  margin-left: 20px; }
+
 .feature {
   padding: 20px;
   border-top: 1px solid #dddddd;
@@ -137,6 +143,12 @@ h1, h3 {
   background-color: whitesmoke; }
   .feature p {
     width: 100%; }
+  .feature a {
+    width: 45%; }
+    .feature a:nth-child(odd) {
+      margin-right: 24px; }
+    .feature a img {
+      width: 45%; }
 
 .law {
   width: 260px;
@@ -162,6 +174,12 @@ figure {
     width: 105px; }
   figure figcaption {
     display: table; }
+
+.expander {
+  background: #181818;
+  width: 100%;
+  margin-bottom: 6px;
+  float: left; }
 
 /* Header */
 header {
@@ -310,6 +328,9 @@ footer {
    Modify as content requires.
    ========================================================================== */
 @media only screen and (min-width: 321px) {
+  #sub-title {
+    display: block; }
+
   .mainnav {
     display: block !important; }
 
