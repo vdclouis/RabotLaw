@@ -2,8 +2,8 @@
 
 <body>
 	<header>
-		<img class="logo" src="http://placekitten.com/40/30" alt="logo">
-		<h1 class="logo"><a href="/" title="{$siteTitle}">{$siteTitle}</a></h1>
+		<img class="logo" src="{$THEME_URL}/core/layout/images/logo@2x.png" alt="logo">
+		<h1><a href="/" title="{$siteTitle}">{$siteTitle}</a></h1>
 		<h2 id="sub-title">Gents advocatenkantoor</h2>
 		<nav class="menu">
 			{$var|getnavigation:'page':0:1}

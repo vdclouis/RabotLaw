@@ -2,7 +2,7 @@
 
 <body>
 	<header>
-		<img class="logo" src="http://placekitten.com/47/28" alt="logo">
+		<img class="logo" src="{$THEME_URL}/core/layout/images/logo@2x.png" alt="logo">
 		<h1><a href="/" title="{$siteTitle}">{$siteTitle}</a></h1>
 		<h2 id="sub-title">Gents advocatenkantoor</h2>
 		<nav class="menu">

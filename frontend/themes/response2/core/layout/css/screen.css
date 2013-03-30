@@ -6,6 +6,16 @@
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
+<<<<<<< HEAD
+=======
+@font-face {
+  font-family: 'nexa';
+  src: url("../font/nexa-regular-webfont.eot");
+  src: url("../font/nexa-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../font/nexa-regular-webfont.woff") format("woff"), url("../font/nexa-regular-webfont.ttf") format("truetype"), url("../font/nexa-regular-webfont.svg#nexa_regularregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+>>>>>>> bijna kleir
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -40,7 +50,11 @@ hr {
   display: block;
   height: 1px;
   border: 0;
+<<<<<<< HEAD
   border-top: 1px solid #ccc;
+=======
+  border-top: 1px solid #cccccc;
+>>>>>>> bijna kleir
   margin: 1em 0;
   padding: 0; }
 
@@ -125,7 +139,14 @@ Color #58a2cb not definitive yet.
 /* Main */
 body {
   color: #777;
+<<<<<<< HEAD
   font-family: 'Open Sans', sans-serif; }
+=======
+  font-family: "Open Sans", sans-serif; }
+
+h1 {
+  font-family: nexa; }
+>>>>>>> bijna kleir
 
 h1, h3 {
   color: #181818; }
@@ -137,6 +158,7 @@ h1, h3 {
   padding: 20px;
   border-top: 1px solid #dddddd;
   border-bottom: 1px solid #dddddd;
+<<<<<<< HEAD
   background-color: #f5f5f5; }
   .feature p {
     width: 100%; }
@@ -150,6 +172,13 @@ h1, h3 {
 .law {
   width: 85%;
   /* 280px */
+=======
+  background-color: whitesmoke; }
+  .feature p {
+    width: 100%; }
+
+.law {
+>>>>>>> bijna kleir
   margin: 0 auto;
   overflow: hidden;
   padding-top: 3%; }
@@ -157,8 +186,13 @@ h1, h3 {
     width: 45%;
     /* 230/280 = 46.43% */
     float: left;
+<<<<<<< HEAD
     margin-left: 1.75%;
     margin-right: 1.75%;
+=======
+    margin-left: 3%;
+    margin-right: 2%;
+>>>>>>> bijna kleir
     margin-bottom: 5%;
     text-decoration: none; }
     .law a img {
@@ -172,6 +206,7 @@ h1, h3 {
       border-bottom-right-radius: 4px;
       border-bottom-left-radius: 4px; }
       .law a .outer .center {
+<<<<<<< HEAD
         display: table-cell;
         vertical-align: middle;
         width: 100%;
@@ -183,6 +218,23 @@ h1, h3 {
       background-color: #58a2cb; }
       .law a:hover .outer .center .inner {
         color: white; }
+=======
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	position: static; }
+	.law a .outer .center .inner {
+	  font-size: 1em;
+	  color: #181818;
+	  text-align: center; }
+    .law a:hover .outer {
+      background-color: #58a2cb; }
+      .law a:hover .outer .center .inner {
+	color: white; }
+
+.law-content {
+  margin-left: 20px; }
+>>>>>>> bijna kleir
 
 .faded {
   opacity: .5; }
@@ -204,6 +256,7 @@ figure {
   float: left; }
 
 /* Header */
+<<<<<<< HEAD
 header .logo {
   float: left;
   padding-top: 8px;
@@ -237,11 +290,56 @@ header nav.menu img {
     top: 11px; }
 header nav.lang {
   display: none; }
+=======
+header {
+  height: 50px; }
+  header .logo {
+    float: left;
+    padding-top: 8px;
+    padding-left: 20px;
+    width: 47px; }
+  header h1 {
+    margin: 0;
+    padding-top: 2px; }
+    header h1 a {
+      text-decoration: none;
+      color: #181818; }
+  header #sub-title {
+    display: none; }
+  header nav ul {
+    padding: 0;
+    margin: 0;
+    margin-left: 70px;
+    padding-top: 12px; }
+    header nav ul li {
+      list-style: none;
+      display: inline-block;
+      color: #bbbbbb; }
+      header nav ul li:hover a {
+	color: #58a2cb; }
+      header nav ul li.selected a {
+	color: #181818; }
+      header nav ul li a {
+	text-decoration: none;
+	color: #bbbbbb; }
+  header nav.menu img {
+    width: 20px; }
+    header nav.menu img#nav {
+      position: absolute;
+      right: 7px;
+      top: 16px; }
+  header nav.lang {
+    display: none; }
+>>>>>>> bijna kleir
 
 /* Contact */
 .location {
   padding: 20px;
+<<<<<<< HEAD
   border-bottom: 1px solid #ddd; }
+=======
+  border-bottom: 1px solid #dddddd; }
+>>>>>>> bijna kleir
   .location p {
     display: inline-block;
     vertical-align: top;
@@ -258,7 +356,11 @@ input.inputText, input.inputPassword, input.inputSearch, input.inputDate, textar
   font-size: 0.8em;
   background-color: #FFFFFF;
   border: 0 none;
+<<<<<<< HEAD
   border: 1px solid #CCC;
+=======
+  border: 1px solid #cccccc;
+>>>>>>> bijna kleir
   color: #666666;
   margin: 0;
   padding: 0.75em 0;
@@ -366,7 +468,11 @@ footer {
 
   footer .footer-content {
     width: 100%; } }
+<<<<<<< HEAD
 @media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+=======
+@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+>>>>>>> bijna kleir
   /* Style adjustments for high resolution devices */ }
 /* ==========================================================================
    Print styles.
@@ -375,7 +481,11 @@ footer {
 @media print {
   * {
     background: transparent !important;
+<<<<<<< HEAD
     color: #000 !important;
+=======
+    color: black !important;
+>>>>>>> bijna kleir
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important; }
@@ -400,7 +510,11 @@ footer {
 
   pre,
   blockquote {
+<<<<<<< HEAD
     border: 1px solid #999;
+=======
+    border: 1px solid #999999;
+>>>>>>> bijna kleir
     page-break-inside: avoid; }
 
   thead {

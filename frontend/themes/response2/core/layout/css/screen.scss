@@ -7,6 +7,16 @@
  */
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@font-face {
+    font-family: 'nexa';
+    src: url('../font/nexa-regular-webfont.eot');
+    src: url('../font/nexa-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	 url('../font/nexa-regular-webfont.woff') format('woff'),
+	 url('../font/nexa-regular-webfont.ttf') format('truetype'),
+	 url('../font/nexa-regular-webfont.svg#nexa_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* ==========================================================================
    Base styles: opinionated defaults
@@ -162,6 +172,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+h1{
+    font-family: nexa;
+}
+
 h1, h3 {
     color: #181818;
 }
@@ -180,22 +194,10 @@ h1, h3 {
     p {
         width: 100%;
     }
-
-    a {
-        width: 45%;
-        
-        &:nth-child(odd){
-            margin-right: 24px;
-        }
-
-        img {
-            width: 45%;
-        }
-    }
 }
 
 .law {
-    width: 85%; /* 280px */
+    //width: 85%; /* 280px */
     margin: 0 auto;
     overflow: hidden;
     padding-top: 3%;
@@ -203,8 +205,8 @@ h1, h3 {
         //display: inline-block;
         width: 45%; /* 230/280 = 46.43% */
         float: left;
-        margin-left: 1.75%;
-        margin-right: 1.75%;
+	margin-left: 3%;
+	margin-right: 2%;
         margin-bottom: 5%;
         text-decoration: none;
         img {
@@ -224,6 +226,7 @@ h1, h3 {
                 .inner{
                     font-size: 1em;
                     color: $buttonfont;
+		    text-align: center;
                 }
             }
         }
@@ -239,6 +242,10 @@ h1, h3 {
             }
         }
     }
+}
+
+.law-content {
+    margin-left: 20px;
 }
 
 .faded {
@@ -275,19 +282,22 @@ figure {
 /* Header */
 
 header{
+    height: 50px;
 
     .logo{
         float: left;
         //padding: 20px;
         padding-top: 8px;
         padding-left: 20px;
+	width: 47px;
     }
 
     h1 {
         margin: 0;
-        //margin-left: 20px;
+	padding-top: 2px;
         a{
             text-decoration: none;
+	    color: #181818;
         }
     }
 
@@ -299,7 +309,8 @@ header{
         ul{
             padding: 0;
             margin: 0;
-            margin-left: 20px;
+	    margin-left: 70px;
+	    padding-top: 12px;
 
             li {
                 list-style: none;
@@ -325,26 +336,17 @@ header{
         }
         &.menu{
             img{
-
                 width: 20px;
                 &#nav{
                     position: absolute;
                     right: 7px;
-                    top: 11px;
-                }
-            }
-            ul{
-                li{
-                    a{
-
-                    }
+		    top: 16px;
                 }
             }
         }
         &.lang{
             display: none;
         }
-        
     }
 }
 
