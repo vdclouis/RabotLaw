@@ -3,3 +3,5 @@ app/config/paramaters.yml
 frontend/themes/response2/core/layout/.DS_Store
 .DS_Store
 screen.css
+
+composer.phar

@@ -161,16 +161,45 @@ $buttonfont: #181818;
 $buttonfonthover: #ffffff;
 
 /* ==========================================================================
+   Variables
+   ========================================================================== */
+
+$footerheight: 160px;
+
+/* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
 
 /* Main */
+html{
+    height: 100%;
+}
 
 body {
+    height: 100%;
     color: #777;
     font-family: 'Open Sans', sans-serif;
 }
+
+#holder{
+    min-height: 100%;
+    position:relative;
+}
+
+.content{
+    padding-bottom: $footerheight;    /* height of footer */
+}
+
+footer{
+    //height: $footerheight;
+    min-height: $footerheight;
+    width:100%;
+    position: absolute;
+    left: 0;
+    bottom: 0; 
+}
+
 
 h1{
     font-family: nexa;
@@ -447,7 +476,10 @@ label {
 
 footer {
     background-color: #181818;
-    padding: 0 20px;
+    //padding: 0 20px;
+    .footer-content{
+        margin-left: 20px;
+    }
     
     a{
         color: #777;
@@ -538,7 +570,7 @@ footer {
     footer{
         .footer-content{
             //border: 1px solid green;
-            width: 100%;
+            width: 95%;
         }
     }
 }

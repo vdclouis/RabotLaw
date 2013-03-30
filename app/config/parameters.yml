@@ -1,24 +1,24 @@
 parameters:
-   database.driver:        mysql
-   database.host:          localhost
-   database.port:          8889
-   database.name:          rabotlaw
-   database.user:          root
-   database.password:      root
+    database.driver:        mysql
+    database.host:          localhost
+    database.port:          8889
+    database.name:          rabotlaw
+    database.user:          root
+    database.password:      root
 
-   fork.debug:             false
-   fork.debug_email:       vdc.louis@gmail.com
-   fork.debug_message:     'Internal error.'
-   fork.version:           '3.5.0'
-   fork.charset:           'utf-8'
+    fork.debug:             false
+    fork.debug_email:       p_vde@hotmail.com
+    fork.debug_message:     'Internal error.'
+    fork.version:           '3.5.0'
+    fork.charset:           'utf-8'
 
-   site.protocol:          http
-   site.domain:            rabotlaw:8888
-   site.default_title:     Fork CMS
-   site.multilanguage:     true
-   site.default_language:  nl
-   site.path_www:          /Library/WebServer/Documents/RabotLaw
-   site.path_library:      /Library/WebServer/Documents/RabotLaw/library
+    site.protocol:          http
+    site.domain:            localhost:8888
+    site.default_title:     Fork CMS
+    site.multilanguage:     true
+    site.default_language:  nl
+    site.path_www:          /Volumes/Mac HD/Documents/sites/git/RabotLaw
+    site.path_library:      /Volumes/Mac HD/Documents/sites/git/RabotLaw/library
 
-   action.group_tag:       @actiongroup
-   action.rights_level:    7
+    action.group_tag:       @actiongroup
+    action.rights_level:    7

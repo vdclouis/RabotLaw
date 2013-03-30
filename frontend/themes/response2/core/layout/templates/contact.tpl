@@ -1,6 +1,7 @@
 {include:core/layout/templates/head.tpl}
 
 <body>
+	<div id="holder">
 	<header>
 		<img class="logo" src="{$THEME_URL}/core/layout/images/logo@2x.png" alt="logo">
 		<h1><a href="/" title="{$siteTitle}">{$siteTitle}</a></h1>

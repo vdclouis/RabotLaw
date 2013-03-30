@@ -25,7 +25,7 @@
 			</div>
 		</div>
 	</footer>
-
+</div>
 	{* General Javascript *}
 	{iteration:jsFiles}
 		<script src="{$jsFiles.file}"></script>
