@@ -145,6 +145,10 @@ $feature-background: #f5f5f5;
 $menucolor: #bbbbbb;
 $menuhovercolor: #58a2cb;
 $menuactivecolor: #181818;
+$button: #dddddd;
+$buttonhover: #58a2cb;
+$buttonfont: #181818;
+$buttonfonthover: #ffffff;
 
 /* ==========================================================================
    Author's custom styles
@@ -195,27 +199,52 @@ h1, h3 {
 }
 
 .law {
-    width: 260px;
-    //border: 1px solid red;
-    display: inline-block;
+    width: 85%; /* 280px */
     margin: 0 auto;
     overflow: hidden;
+    padding-top: 3%;
     a{
-        width: 10px;
+        //display: inline-block;
+        width: 45%; /* 230/280 = 46.43% */
+        float: left;
+        margin-left: 1.75%;
+        margin-right: 1.75%;
+        margin-bottom: 5%;
+        text-decoration: none;
         img {
-            //width: 100%;
-            //padding: 8px;
+            max-width: 100%;
         }
+        .outer{
+            display: table; 
+            position: static;
+            height: 60px;
+            width: 100%;
+            background-color: $button;
+            border-bottom-right-radius: 4px;
+            border-bottom-left-radius: 4px;
 
-
-        p{
-            display: table;
-            margin: 0 auto;
-            background-color: orange;
+            .center{
+                display: table-cell; vertical-align: middle; width: 100%; position: static;
+                .inner{
+                    font-size: 1em;
+                    color: $buttonfont;
+                }
+            }
         }
-
+        &:hover{
+            .outer{
+                background-color: $buttonhover;
+                .center{
+                    
+                    .inner{
+                        color: $buttonfonthover;
+                    }
+                }
+            }
+        }
     }
 }
+
 
 .faded {
     opacity: .5;
