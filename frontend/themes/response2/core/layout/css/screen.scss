@@ -147,6 +147,92 @@ header{
     }
 }
 
+/* Contact */
+
+.location {
+    border-bottom: 1px solid #ddd;
+    padding: 100px 0;
+}
+
+#map {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 335px;
+}
+
+input.inputText, input.inputPassword, input.inputSearch, input.inputDate, textarea {
+    //font-family: "Crimson Text", georgia, serif;
+    font-size: 0.8em;
+    background-color: #FFFFFF;
+    border: 0 none;
+    border: 1px solid #CCC;
+    color: #666666;
+    margin: 0;
+    padding: 0.75em 0;
+    width: 100%;
+    text-indent: 1em;
+    border-radius: 2px;
+    outline: none;
+}
+
+textarea {
+    line-height: 1.8;
+    resize: none;
+}
+
+input.inputText:focus, input.inputPassword:focus, input.inputSearch:focus, input.inputDate:focus, textarea:focus {
+    -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+      -moz-box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+       -ms-box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+        -o-box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+           box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+}
+
+.inputSubmit {
+    margin:0 0 1.3em 0;
+    padding: 0.7em 1em;
+    font-size: 0.9em;
+    //font-family: 'Oswald', arial, sans-serif;
+    font-weight: normal;
+    line-height: 2em;
+    text-transform: uppercase;
+    background: #181818;
+    border: none;
+    color: #fff;
+    -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+       -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+           border-radius: 2px;
+    cursor: pointer;
+
+}
+
+.inputSubmit:hover {
+    background-color: #5bb75b;
+}
+
+label {
+    display: block;
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+    line-height: 2.25em;
+    margin-bottom: 0;
+    list-style: none outside none;
+    text-transform: uppercase;
+}
+
+
+.warning,
+.formError {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
 /* Footer */
 
 footer {
