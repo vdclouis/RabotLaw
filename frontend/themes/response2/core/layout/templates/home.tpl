@@ -10,7 +10,7 @@
 			<img id="nav" src="{$THEME_URL}/core/layout/images/nav.png" alt="navigation">
 		</nav>
 		<nav class="lang">
-			{include:core/layout/templates/languages.tpl}
+			{include:theme/response2/core/layout/templates/languages.tpl}
 		</nav>
 	</header>
 	<div class="content">
