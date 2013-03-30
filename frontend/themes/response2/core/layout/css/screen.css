@@ -127,7 +127,7 @@ body {
   color: #777;
   font-family: "Open Sans", sans-serif; }
 
-h1, h2 {
+h1, h3 {
   color: #181818; }
 
 .feature {
@@ -135,6 +135,8 @@ h1, h2 {
   border-top: 1px solid #dddddd;
   border-bottom: 1px solid #dddddd;
   background-color: whitesmoke; }
+  .feature p {
+    width: 100%; }
 
 .law {
   display: inline-block;
@@ -149,14 +151,14 @@ h1, h2 {
   opacity: .5; }
 
 /* Team */
-.team {
-  text-align: center; }
-
 figure {
   display: inline-block;
-  padding: 30px 0; }
+  padding: 0px 26px;
+  width: 105px; }
   figure img {
-    width: 50%; }
+    width: 105px; }
+  figure figcaption {
+    display: table; }
 
 /* Header */
 header {
@@ -198,14 +200,19 @@ header {
 
 /* Contact */
 .location {
-  border-bottom: 1px solid #dddddd;
-  padding: 100px 0; }
+  padding: 20px;
+  border-bottom: 1px solid #dddddd; }
+  .location p {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 40px; }
+  .location img {
+    display: inline-block;
+    margin-top: 10px;
+    width: 106px; }
 
-#map {
-  display: block;
-  position: absolute;
-  right: 10px;
-  top: 335px; }
+.mod {
+  padding-left: 20px; }
 
 input.inputText, input.inputPassword, input.inputSearch, input.inputDate, textarea {
   font-size: 0.8em;
@@ -215,7 +222,7 @@ input.inputText, input.inputPassword, input.inputSearch, input.inputDate, textar
   color: #666666;
   margin: 0;
   padding: 0.75em 0;
-  width: 100%;
+  width: 95%;
   text-indent: 1em;
   border-radius: 2px;
   outline: none; }
@@ -311,6 +318,9 @@ footer {
   footer .footer-content {
     width: 400px; } }
 @media only screen and (min-width: 640px) {
+  .feature p {
+    width: 80%; }
+
   footer .footer-content {
     width: 100%; } }
 @media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {

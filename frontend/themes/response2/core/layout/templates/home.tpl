@@ -4,6 +4,7 @@
 	<header>
 		<img class="logo" src="http://placekitten.com/40/30" alt="logo">
 		<h1><a href="/" title="{$siteTitle}">{$siteTitle}</a></h1>
+		<h2>Gents advocatenkantoor</h2>
 		<nav class="menu">
 			{$var|getnavigation:'page':0:1}
 			<img id="nav" src="{$THEME_URL}/core/layout/images/nav.png" alt="navigation">
