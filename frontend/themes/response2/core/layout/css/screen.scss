@@ -6,6 +6,8 @@
  * Kroc Camen, and the H5BP dev community and team.
  */
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -151,12 +153,18 @@ $menuactivecolor: #181818;
 
 /* Main */
 
-h1 {
+body {
+    color: #777;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2 {
     color: #181818;
 }
 
 .feature{
-    text-align: center;
+    //text-align: center;
+    padding: 20px;
     border-top: 1px solid $border;
     border-bottom: 1px solid $border;
     background-color: $feature-background;
@@ -372,6 +380,12 @@ label {
 
 footer {
     background-color: #181818;
+    padding: 0 20px;
+    
+    a{
+        color: #777;
+        text-decoration: none;
+    }
 
     h3 {
         color: #e5e5e5;
@@ -390,9 +404,27 @@ footer {
         }
     }
 
+    .links {
+        li {
+            display: inline-block;
+            &:after {
+                content: ' |';
+            }
+            &:last-child{
+                &:after {
+                    content: '';
+                }
+            }
+        }
+    }
+
     div {
         display: inline-block;
         vertical-align: top;
+        margin-right: 80px;
+        &:last-child{
+            margin-right: 0;
+        }
     }
 }
 
@@ -408,6 +440,30 @@ footer {
     }
     #nav {
         display: none;
+    }
+    footer {
+        //padding: 20px 60px;
+        .footer-content{
+            //border: 1px solid red;
+        }
+    }
+}
+
+@media only screen and (min-width: 520px) {
+    footer{
+        .footer-content{
+            //border: 1px solid orange;
+            width: 400px;
+        }
+    }
+}
+
+@media only screen and (min-width: 640px) {
+    footer{
+        .footer-content{
+            //border: 1px solid green;
+            width: 100%;
+        }
     }
 }
 

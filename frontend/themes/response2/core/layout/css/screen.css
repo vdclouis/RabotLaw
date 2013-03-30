@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 /*
  * HTML5 Boilerplate
  *
@@ -122,11 +123,15 @@ Color #58a2cb not definitive yet.
    Author's custom styles
    ========================================================================== */
 /* Main */
-h1 {
+body {
+  color: #777;
+  font-family: "Open Sans", sans-serif; }
+
+h1, h2 {
   color: #181818; }
 
 .feature {
-  text-align: center;
+  padding: 20px;
   border-top: 1px solid #dddddd;
   border-bottom: 1px solid #dddddd;
   background-color: whitesmoke; }
@@ -264,7 +269,11 @@ label {
 
 /* Footer */
 footer {
-  background-color: #181818; }
+  background-color: #181818;
+  padding: 0 20px; }
+  footer a {
+    color: #777;
+    text-decoration: none; }
   footer h3 {
     color: #e5e5e5; }
   footer p {
@@ -274,9 +283,18 @@ footer {
     footer ul li {
       list-style: none;
       color: #666; }
+  footer .links li {
+    display: inline-block; }
+    footer .links li:after {
+      content: ' |'; }
+    footer .links li:last-child:after {
+      content: ''; }
   footer div {
     display: inline-block;
-    vertical-align: top; }
+    vertical-align: top;
+    margin-right: 80px; }
+    footer div:last-child {
+      margin-right: 0; }
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -289,6 +307,12 @@ footer {
 
   #nav {
     display: none; } }
+@media only screen and (min-width: 520px) {
+  footer .footer-content {
+    width: 400px; } }
+@media only screen and (min-width: 640px) {
+  footer .footer-content {
+    width: 100%; } }
 @media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */ }
 /* ==========================================================================
