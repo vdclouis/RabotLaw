@@ -5,6 +5,7 @@
 		<h1 class="logo"><a href="/" title="{$siteTitle}">{$siteTitle}</a></h1>
 		<nav>
 			{$var|getnavigation:'page':0:1}
+			<img id="nav" src="{$THEME_URL}/core/layout/images/nav.png" alt="navigation">
 		</nav>
 		<nav>
 			{include:core/layout/templates/languages.tpl}

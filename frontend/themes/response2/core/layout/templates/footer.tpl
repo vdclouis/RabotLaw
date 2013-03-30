@@ -24,6 +24,9 @@
 		<script src="{$jsFiles.file}"></script>
 	{/iteration:jsFiles}
 
+	{* Theme specific Javascript *}
+	<script src="{$THEME_URL}/core/layout/js/script.js"></script>
+
 	{* Site wide HTML *}
 	{$siteHTMLFooter}
 </body>
