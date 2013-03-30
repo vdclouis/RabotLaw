@@ -1,2 +1,6 @@
 vendor
+<<<<<<< HEAD
 paramaters.yml
+=======
+app/config/parameters.yml
+>>>>>>> more

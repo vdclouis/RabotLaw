@@ -90,6 +90,61 @@ textarea {
 }
 
 /* ==========================================================================
+   Color Codes
+   ========================================================================== */
+
+/*
+ * Main.
+ */
+
+/*
+background: #ffffff
+border: #dddddd
+feature background: #f5f5f5
+font h1: #181818
+font p: #777777
+
+NAVIGATION
+---
+active: #181818
+non active: #bbbbbb
+hover: #58a2cb
+
+NAVIGATION MOBILE ICON
+---
+active #bbbbbb
+non active: #181818
+
+HOME LAW BUTTONS
+---
+non active: #dddddd
+non active font: #181818
+hover: #58a2cb
+hover font: #fffff
+
+FORM
+---
+border: #bbbbbb
+required field asterix: #58a2cb
+
+FOOTER
+---
+background: #181818
+font h1: #e5e5e5
+font p: #666666
+
+SIDE NOTE
+---
+Color #58a2cb not definitive yet.
+*/
+
+$border: #dddddd;
+$feature-background: #f5f5f5;
+$menucolor: #bbbbbb;
+$menuhovercolor: #58a2cb;
+$menuactivecolor: #181818;
+
+/* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
@@ -100,21 +155,31 @@ h1 {
     color: #181818;
 }
 
-.feature {
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
+.feature{
     text-align: center;
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
+    background-color: $feature-background;
 }
 
 .law {
-    border: 1px solid red;
+    
+    //border: 1px solid red;
     display: inline-block;
     margin: 0 auto;
     overflow: hidden;
+    a{
+        img {
+            width: 140px;
+            //padding: 8px;
+        }
+        .title{
 
-    img {
-        width: 140px;
-        padding: 8px;
+            p{
+                display: inline-block;
+            }
+        }
+
     }
 }
 
@@ -141,24 +206,79 @@ figure {
 
 header{
     margin-left: 7px;
+    height: 50px;
+
+    .logo{
+        float: left;
+        margin-top: 10px;
+    }
+
+    header{
+        padding-top: 5px;
+    }
 
     h1 {
-        margin-top: 5px;
-    }
-    img {
-        position: absolute;
-        right: 7px;
-        top: 11px;
-    }
-
-    nav ul {
-        padding: 0;
-
-        li {
-            list-style: none;
-            display: inline-block;
-            margin-right: 20px;
+        margin: 0;
+        margin-left: 50px;
+        //margin-top: 5px;
+        a{
+            text-decoration: none;
+            color: #000;
         }
+    }
+
+
+    nav{
+        ul{
+            padding: 0;
+            margin: 0;
+
+            li {
+                list-style: none;
+                display: inline-block;
+                //margin-right: 20px;
+                color: $menucolor;
+                &:hover{
+                    a{
+                        color: $menuhovercolor;
+
+                    }
+                }
+                &.selected{
+                    a{
+                        color: $menuactivecolor;
+
+                    }
+                }
+                a{
+                    text-decoration: none;
+                    color: $menucolor;
+
+                }
+            }
+        }
+        &.menu{
+            img{
+
+                width: 20px;
+                &#nav{
+                    position: absolute;
+                    right: 7px;
+                    top: 11px;
+                }
+            }
+            ul{
+                li{
+                    a{
+
+                    }
+                }
+            }
+        }
+        &.lang{
+            display: none;
+        }
+        
     }
 }
 
