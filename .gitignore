@@ -1,10 +1,5 @@
 vendor
-
-paramaters.yml
-
-app/config/parameters.yml
-
-
+app/config/paramaters.yml
 frontend/themes/response2/core/layout/.DS_Store
-
 .DS_Store
+screen.css
