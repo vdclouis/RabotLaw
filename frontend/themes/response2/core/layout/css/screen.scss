@@ -162,10 +162,6 @@ h1, h3 {
     color: #181818;
 }
 
-#sub-title{
-    display: none;
-}
-
 .home-content{
     margin-left: 20px;
 }
@@ -191,29 +187,6 @@ h1, h3 {
         img {
             width: 45%;
         }
-    }
-}
-
-.law {
-    width: 260px;
-    //border: 1px solid red;
-    display: inline-block;
-    margin: 0 auto;
-    overflow: hidden;
-    a{
-        width: 10px;
-        img {
-            //width: 100%;
-            //padding: 8px;
-        }
-
-
-        p{
-            display: table;
-            margin: 0 auto;
-            background-color: orange;
-        }
-
     }
 }
 
@@ -251,52 +224,51 @@ figure {
 /* Header */
 
 header{
-    margin-left: 7px;
-    height: 50px;
 
     .logo{
         float: left;
-        margin-top: 10px;
+        //padding: 20px;
+        padding-top: 8px;
+        padding-left: 20px;
     }
-
 
     h1 {
         margin: 0;
-        margin-left: 50px;
-        //margin-top: 5px;
+        //margin-left: 20px;
         a{
             text-decoration: none;
-            color: #000;
         }
     }
 
+    #sub-title{
+        display: none;
+    }
 
     nav{
         ul{
             padding: 0;
             margin: 0;
+            margin-left: 20px;
 
             li {
                 list-style: none;
                 display: inline-block;
-                //margin-right: 20px;
                 color: $menucolor;
+
                 &:hover{
                     a{
                         color: $menuhovercolor;
-
                     }
                 }
+
                 &.selected{
                     a{
                         color: $menuactivecolor;
-
                     }
                 }
                 a{
                     text-decoration: none;
                     color: $menucolor;
-
                 }
             }
         }
