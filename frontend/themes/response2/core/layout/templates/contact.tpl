@@ -2,13 +2,13 @@
 
 <body class="frame">
 	<header class="row">
-		<img class="logo" src="{$THEME_URL}/core/layout/images/logo@2x.png" alt="logo">
-		<h1><a href="/" title="{$siteTitle}">{$siteTitle}</a></h1>
-		<h2 id="sub-title">Gents advocatenkantoor</h2>
 		<nav class="menu">
 			{$var|getnavigation:'page':0:1}
 			<img id="nav" src="{$THEME_URL}/core/layout/images/nav.png" alt="navigation">
 		</nav>
+		<img class="logo" src="{$THEME_URL}/core/layout/images/logo@2x.png" alt="logo">
+		<h1><a href="/" title="{$siteTitle}">{$siteTitle}</a></h1>
+		<h2 id="sub-title">Gents advocatenkantoor</h2>
 		<nav class="lang">
 			{include:theme/response2/core/layout/templates/languages.tpl}
 		</nav>

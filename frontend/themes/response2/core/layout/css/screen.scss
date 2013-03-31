@@ -303,6 +303,7 @@ figure {
 header.row{
     height: 50px;
 
+
     .logo{
         float: left;
         //padding: 20px;
@@ -314,6 +315,7 @@ header.row{
     h1 {
         margin: 0;
 	    padding-top: 2px;
+        display: inline-block;
         a{
             text-decoration: none;
 	        color: #181818;
@@ -523,31 +525,33 @@ footer {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 321px) {
-    header {
-	height: 150px;
+@media only screen and (min-width: 640px) {
+    header.row {
+    	height: 150px;
 
-	#sub-title{
-	    display: block;
-	    font-size: 16px;
-	    margin-left: 20px;
-	    font-family: nexa;
-	}
-	.menu {
-	    text-align: center;
-	    ul {
-		margin: 0;
+    	#sub-title{
+    	    display: block;
+    	    font-size: 16px;
+    	    margin-left: 20px;
+    	    font-family: nexa;
+    	}
+    	.menu {
+    	    text-align: center;
+    	    ul {
+    		    margin: 0;
 
-		li{
-		    margin-right: 15px;
+        		li{
+        		    margin-right: 15px;
 
-		    &:last-child{
-			margin-right: 0;
-		    }
-		}
-	    }
-
-	}
+        		    &:last-child{
+        			margin-right: 0;
+        		    }
+        		}
+    	    }
+    	}
+        h2#sub-title{
+            display: block;
+        }
     }
 
     .mainnav {
@@ -598,7 +602,6 @@ footer {
     header{
 	.menu{
 	    float: right;
-	    margin-top: -60px;
 	    margin-right: 20px;
 
 	    li{
