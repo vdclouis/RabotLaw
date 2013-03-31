@@ -1,4 +1,4 @@
-	<footer>
+	<footer class="row">
 		<div class="footer-content">
 			<div>
 				<h3>LINKS</h3>
@@ -25,7 +25,6 @@
 			</div>
 		</div>
 	</footer>
-</div>
 	{* General Javascript *}
 	{iteration:jsFiles}
 		<script src="{$jsFiles.file}"></script>
