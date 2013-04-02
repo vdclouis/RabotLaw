@@ -191,26 +191,49 @@ h1, h3{
     -webkit-transition-timing-function: linear;
     .headertop{
         overflow: hidden;
-    }
-    .logo{
-        float: left;
-        //padding: 20px;
-        padding-top: 8px;
-        padding-left: 20px;
-        width: 47px;
-    }
-    h1 {
-        margin: 0;
-        padding-top: 2px;
-        display: inline-block;
-        float: left;
-        a{
-            text-decoration: none;
-            color: #181818;
+        -webkit-transition-property: margin-top; 
+        -webkit-transition-duration: 0.3s; 
+        -webkit-transition-timing-function: linear;
+        -moz-transition-property: margin-top; 
+        -moz-transition-duration: 0.3s; 
+        -moz-transition-timing-function: linear;
+        transition-property: margin-top; 
+        transition-duration: 0.3s; 
+        transition-timing-function: linear;
+        .logo{
+            float: left;
+            //padding: 20px;
+            padding-top: 8px;
+            padding-left: 20px;
+            width: 47px;
+        }
+        h1 {
+            margin: 0;
+            padding-top: 2px;
+            display: inline-block;
+            float: left;
+            a{
+                text-decoration: none;
+                color: #181818;
+            }
         }
     }
+
     #sub-title{
-        display: none;
+        //display: none;
+        font-size: 16px;
+        font-family: nexa;
+        margin: 10px 0 0 20px;
+        opacity: 0;
+        -webkit-transition-property: opacity; 
+        -webkit-transition-duration: 0.3s; 
+        -webkit-transition-timing-function: linear;
+        -moz-transition-property: opacity; 
+        -moz-transition-duration: 0.3s; 
+        -moz-transition-timing-function: linear;
+        transition-property: opacity; 
+        transition-duration: 0.3s; 
+        transition-timing-function: linear;
     }
     .menu{
         ul{
@@ -221,7 +244,18 @@ h1, h3{
             li {
                 list-style: none;
                 display: inline-block;
-                color: $menucolor;
+                a{
+                    color: $menucolor;
+                    -webkit-transition-property: color; 
+                    -webkit-transition-duration: 0.1s; 
+                    -webkit-transition-timing-function: linear;
+                    -moz-transition-property: color; 
+                    -moz-transition-duration: 0.1s; 
+                    -moz-transition-timing-function: linear;
+                    transition-property: color; 
+                    transition-duration: 0.1s; 
+                    transition-timing-function: linear;  
+                }
                 &:hover{
                     a{
                         color: $menuhovercolor;
@@ -292,6 +326,15 @@ h1, h3{
                     background-color: $button;
                     border-bottom-right-radius: 4px;
                     border-bottom-left-radius: 4px;
+                    -webkit-transition-property: background-color; 
+                    -webkit-transition-duration: 0.1s; 
+                    -webkit-transition-timing-function: linear;
+                    -moz-transition-property: background-color; 
+                    -moz-transition-duration: 0.1s; 
+                    -moz-transition-timing-function: linear;
+                    transition-property: background-color; 
+                    transition-duration: 0.1s; 
+                    transition-timing-function: linear;
                     .center{
                         display: table-cell;
                         vertical-align: middle;
@@ -301,6 +344,15 @@ h1, h3{
                             font-size: 1em;
                             color: $buttonfont;
                             text-align: center;
+                            -webkit-transition-property: color; 
+                            -webkit-transition-duration: 0.1s; 
+                            -webkit-transition-timing-function: linear;
+                            -moz-transition-property: color; 
+                            -moz-transition-duration: 0.1s; 
+                            -moz-transition-timing-function: linear;
+                            transition-property: color; 
+                            transition-duration: 0.1s; 
+                            transition-timing-function: linear;  
                         }
                     }
                 }
@@ -532,14 +584,18 @@ footer {
    ========================================================================== */
 
 @media only screen and (min-width: 520px) {
-    header {
-        h1{
-            margin-top: 20px;
+        .mainheader{
+            .headertop{
+                h1{
+                } 
+            }
+            .headerbottom{
+                #sub-title{
+                    margin-top: 0px;
+                }
+            }      
         }
-        #sub-title{
-            margin-top: 0px;
-        }
-    }
+
     footer{
         .footer-content{
             //border: 1px solid orange;
@@ -571,10 +627,7 @@ footer {
         }
         .headerbottom{
             #sub-title{
-                display: block;
-                font-size: 16px;
-                margin: 10px 0 0 20px;
-                font-family: nexa;
+                opacity: 1;
             }
             .lang{
                 display: block;
@@ -582,8 +635,12 @@ footer {
                 margin-right: 20px;
                 ul{
                     list-style-type: none;
+                    margin-top: 0;
+                    margin-bottom: 0;
                     -webkit-margin-before: 0;
                     -webkit-margin-after: 0;
+                    margin-before: 0;
+                    margin-after: 0;
                     li{
                         opacity: 0.5;
                         float: left;
