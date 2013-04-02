@@ -184,12 +184,12 @@ h1, h3{
 /* Header */
 
 .mainheader{
-    height: 50px;
-    padding-top: 3px;
+    height: 60px;
     -webkit-transition-property: height; 
     -webkit-transition-duration: 0.3s; 
     -webkit-transition-timing-function: linear;
     .headertop{
+        margin-top: 15px;
         overflow: hidden;
         -webkit-transition-property: margin-top; 
         -webkit-transition-duration: 0.3s; 
@@ -218,7 +218,6 @@ h1, h3{
             }
         }
     }
-
     #sub-title{
         //display: none;
         font-size: 16px;
@@ -236,6 +235,7 @@ h1, h3{
         transition-timing-function: linear;
     }
     .menu{
+        float: left;
         ul{
             padding: 0;
             margin: 0;
@@ -272,16 +272,13 @@ h1, h3{
                 }
             }
         }
-    }
-    .menu{
-        float: left;
         img{
             width: 20px;
             &#nav{
                 cursor: pointer;
                 position: absolute;
                 right: 15px;
-                top: 18px;
+                top: 30px;
                 opacity: 0.5;
                 &:hover{
                     opacity: 1;
@@ -290,7 +287,37 @@ h1, h3{
         }
     }
     .lang{
-        display: none;
+        opacity: 0;
+        float: right;
+        margin-right: 20px;
+        //display: none;
+        -webkit-transition-property: opacity; 
+        -webkit-transition-duration: 0.3s; 
+        -webkit-transition-timing-function: linear;
+        -moz-transition-property: opacity; 
+        -moz-transition-duration: 0.3s; 
+        -moz-transition-timing-function: linear;
+        transition-property: opacity; 
+        transition-duration: 0.3s; 
+        transition-timing-function: linear; 
+        ul{
+            list-style-type: none;
+            margin-top: 0;
+            margin-bottom: 0;
+            -webkit-margin-before: 0;
+            -webkit-margin-after: 0;
+            li{
+                opacity: 0.5;
+                float: left;
+                margin-left: 10px;
+                &.selected{
+                    opacity: 1;
+                }
+                a{
+                    display: block;
+                }
+            }
+        }
     }
 }
 
@@ -584,21 +611,20 @@ footer {
    ========================================================================== */
 
 @media only screen and (min-width: 520px) {
-        .mainheader{
-            .headertop{
-                h1{
-                } 
-            }
-            .headerbottom{
-                #sub-title{
-                    margin-top: 0px;
-                }
-            }      
+    .mainheader{
+        .headertop{
+            h1{
+            } 
         }
+        .headerbottom{
+            #sub-title{
+                margin-top: 0px;
+            }
+        }
+    }
 
     footer{
         .footer-content{
-            //border: 1px solid orange;
             width: 400px;
         }
     }
@@ -621,38 +647,37 @@ footer {
 
 @media only screen and (min-width: 640px) {
     .mainheader {
-        height: 150px;
+        height: 100px;
         .headertop{
             margin-top: 30px;
+            h1{
+                display: block !important;
+            }
         }
         .headerbottom{
             #sub-title{
                 opacity: 1;
             }
             .lang{
-                display: block;
-                float: right;
-                margin-right: 20px;
-                ul{
-                    list-style-type: none;
-                    margin-top: 0;
-                    margin-bottom: 0;
-                    -webkit-margin-before: 0;
-                    -webkit-margin-after: 0;
-                    margin-before: 0;
-                    margin-after: 0;
-                    li{
-                        opacity: 0.5;
-                        float: left;
-                        margin-left: 10px;
-                        &:selected{
-                            opacity: 1;
-                        }
-                        a{
-                            display: block;
-                        }
-                    }
-                }
+                opacity: 1;
+                // ul{
+                //     list-style-type: none;
+                //     margin-top: 0;
+                //     margin-bottom: 0;
+                //     -webkit-margin-before: 0;
+                //     -webkit-margin-after: 0;
+                //     li{
+                //         opacity: 0.5;
+                //         float: left;
+                //         margin-left: 10px;
+                //         &:selected{
+                //             opacity: 1;
+                //         }
+                //         a{
+                //             display: block;
+                //         }
+                //     }
+                // }
             }
         }
         .menu {
