@@ -579,7 +579,7 @@ footer {
         margin-left: 20px;
     }
     a, h3, p, li{
-        font-size: 12px;
+        font-size: 10px;
 
     }
     a{
@@ -613,12 +613,14 @@ footer {
             }
         }
     }
-    div {
-        display: inline-block;
-        vertical-align: top;
-        margin-right: 80px;
-        &:last-child{
-            margin-right: 0;
+    .footer-content{
+        div {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 80px;
+            &:last-child{
+                margin-right: 0;
+            }
         }
     }
 }
@@ -725,9 +727,7 @@ footer {
         }
     }
     footer {
-        //padding: 20px 60px;
         .footer-content{
-            //border: 1px solid red;
         }
     }
     .feature {
@@ -738,7 +738,6 @@ footer {
     
     footer{
         .footer-content{
-            //border: 1px solid green;
             width: 95%;
         }
     }
@@ -780,12 +779,75 @@ footer {
         }
     }
 }
+
 @media only screen and (min-width: 1100px) {
+    .mainheader{
+        .headertop, .headerbottom{
+            margin-left: auto;
+            margin-right: auto;
+            width: 960px;
+        }
+        .headertop{
+            .menu{
+                margin-right: 0;
+            }
+        }
+        .headerbottom{
+            .lang{
+                margin-right: 0;
+            }
+        }
+    }
     .content{
         .feature{
-            .law{
-                width: 1080px;
+            h3, p{
+                width: 960px;
+                margin: 0 auto;
             }
+            .law{
+                width: 960px;
+                a{
+                    margin: 0 32px 10px 0;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        .home-content{
+            width: 960px;
+            margin: 0 auto;
+        }
+        .team{
+            width: 960px;
+            margin: 0 auto;
+            figure{
+                &:first-child{
+                    padding-left: 0;
+                }
+                &:last-child{
+                    padding-right: 0;
+                }
+            }
+        }
+        .contact-content{
+            width: 960px;
+            margin: 0 auto;
+            .location{
+                padding-left: 0;
+            }
+            .contact{
+
+            }
+            .mod{
+                padding-left: 0;
+            }
+        }
+    }
+    footer{
+        .footer-content{
+            margin: 0 auto;
+            width: 960px;
         }
     }
 }
