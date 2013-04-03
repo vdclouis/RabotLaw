@@ -9,11 +9,6 @@ $(function(){
 		$(this).toggleClass('faded');
 	});
 
-	// bedrijven
-	if($(this).next().is("ul")) {
-
-	}
-
 	//team page
 	var $exp = $('<div class="expander"></div>');
 
