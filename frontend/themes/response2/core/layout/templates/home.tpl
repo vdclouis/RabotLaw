@@ -3,7 +3,7 @@
 <body class="frame">
 	<header class="mainheader">
 		<div class="headertop">
-			<img class="logo" src="{$THEME_URL}/core/layout/images/logo@2x.png" alt="logo">
+			<a href="/"><img class="logo" src="{$THEME_URL}/core/layout/images/logo@2x.png" alt="logo"></a>
 			<h1><a href="/" title="{$siteTitle}">{$siteTitle}</a></h1>
 			<nav class="menu">
 				{$var|getnavigation:'page':0:1}
