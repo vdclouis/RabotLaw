@@ -441,10 +441,15 @@ figure {
 }
 
 .expander {
-    background: #181818;
+    background: $feature-background;
     width: 100%;
     margin-bottom: 6px;
     float: left;
+    padding: 0 0 20px 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 
@@ -452,6 +457,7 @@ figure {
 
 .contact{
     div{
+
         h3{
             margin-left: 20px;
         }
@@ -648,6 +654,12 @@ footer {
             }
         }
     }
+    .contact {
+        div {
+            display: inline-block;
+            width: 245px;
+        }
+    }
 }
 
 @media only screen and (min-width: 640px) {
@@ -706,6 +718,17 @@ footer {
             width: 80%;
         }
     }
+    
+    footer{
+        .footer-content{
+            //border: 1px solid green;
+            width: 95%;
+        }
+    }
+}
+
+@media only screen and (min-width: 800px) {
+
     .location {
         width: 20%;
         display: inline-block;
@@ -726,7 +749,8 @@ footer {
             width: 106px;
         }
     }
-    .contact{
+
+    .contact {
         border-bottom: 1px solid #ddd;
         border-left: 1px solid #ddd;
         display: inline-block;
@@ -734,14 +758,8 @@ footer {
         width: 74.38%;
         div {
             display: inline-block;
-            margin-right: 100px;
-            width: 190px;
-        }
-    }
-    footer{
-        .footer-content{
-            //border: 1px solid green;
-            width: 95%;
+            //color: red;
+            width: 280px;
         }
     }
 }
