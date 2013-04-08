@@ -423,8 +423,26 @@ h1, h3{
     opacity: .5;
 }
 
+.archive-title {
+}
+
+.ul-click:hover {
+    color: $menuhovercolor;
+}
 .ul-click {
-    color: brown;
+    color: #333;
+    cursor: pointer;
+   
+}
+.ul-click li {
+    color: #777;
+}
+
+.ul-click ul {
+    float: right;
+    position: absolute;
+    left: 450px;
+    top: 365px;
 }
 
 /* Team */

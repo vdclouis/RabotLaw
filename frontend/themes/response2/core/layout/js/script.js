@@ -46,7 +46,18 @@ $(function(){
 	// nested ul collapse
 	$('.archive-title ul').hide();
 	$('.ul-click').click(function() {
-		$(this).find('ul').slideToggle();
+		if ($(this).hasClass('contract')) {
+			$(this).find('ul').slideToggle();
+		} else if ($(this).hasClass('distributie')) {
+			$(this).find('ul').slideToggle();
+		} else if ($(this).hasClass('intellectuele')) {
+			$(this).find('ul').slideToggle();
+		} else if ($(this).hasClass('transport')) {
+			$(this).find('ul').slideToggle();
+		} else if ($(this).hasClass('verzekering')) {
+			$(this).find('ul').slideToggle();
+		}
+		
 	})
 
 });
